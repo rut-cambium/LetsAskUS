@@ -1,5 +1,6 @@
 var video;
-
+var time = 10;
+var total = 0;
 $(document).ready(function() {
     init();
 });
@@ -34,6 +35,9 @@ function showAnswers(id){
      $("#Q" + id + " .banner").show();
      $("#Q" + id + " .question").hide();
 
+     //init the value, time, total by Q1
+     initHeaderQuestionValue(id);
+
      //show answers
       $("#Q" + id + " .answers").show();
 }
@@ -42,15 +46,14 @@ function showQuestion(id){
      console.log("showQuestion " + id);
      
      //show Question
-
-
+     $("#Q" + id + " .question").show();
      //start timer
-     startTimer();
+     startTimer(id);
 }
 
 function showPrecents(id){
      console.log("showPrecents " + id);
-
+     $("#waitingScreen").hide();
      //hide answers, show answers with perctenge
 
      //show the coorect answer
@@ -58,32 +61,52 @@ function showPrecents(id){
      //set total value
 }
 
-
-
 function hideAnswer(id){
      console.log("hideAnswer " + id);
 
      //hide the answers
+     $("#Q" + id + " .answers").hide();
+     $("#Q" + id + " .question").hide();
 }
 
-function startTimer(){
+function startTimer(id){
     time = 10;
     var timeInterval = setInterval(function() {
-        if(time >= 0 ) {
-            timer();
+        if(time > 0) {
+            var timeDisplay = timer();
+            console.log(timeDisplay);
+            $("#Q" + id + " .time .val").text(timeDisplay);
         }
         else {
             window.clearInterval(timeInterval);
             //
-            $("body").trigger("timerEnd",[1]);
+            $("body").trigger("timerEnd", [1]);
         }
+
     }, 1000);
+}
+
+
+function timer(){
+    if(time> 0){
+        time--; 
+    }
+  
+    if(time == 10){
+        
+        return "00:10";
+    }
+    else{
+        return "00:0" + time;  
+    }
+   
 }
 
 function timerEnd(){
     
     //show the waiting screen
     console.log("show waiting screen");
+    $("#waitingScreen").show();
 }
 
 function triggerVideoEvents(){
@@ -171,17 +194,18 @@ function triggerVideoEvents(){
         }
     }, 1000);
 }
-time = 10;
 
-
-function timer(){
-   
-    if(time == 10){
-        console.log("00:10");
-    }
-    else{
-        console.log("00:0" + time);  
-    }
-   
-    time--;
+function initHeaderQuestionValue(id){
+    var value = getValue(id);
+    $("#Q" + id + " .value .val").text("$"+value);
+    $("#Q" + id + " .time .val").text("00:10");
+    $("#Q" + id + " .total .val").text("$"+total);
+    
 }
+
+
+function getValue(numOfQ){
+    var currentData = data["question" + numOfQ];
+    return currentData.value;
+}
+
