@@ -1,0 +1,57 @@
+.movPlace{
+	position:absolute;
+	width:270px;
+	height: 153px;
+	top:30px;
+	left:30px;
+	border-radius:10px;
+	border:solid 6px #1f59a2;
+	display:none;
+	overflow: hidden;
+}
+video{
+	width:270px; 
+	height:225px;
+	position:absolute;
+	top: -35px;
+}
+/*---------------------------------------------------home------------------------------------------------*/
+ span.logoHome{
+	background-image:url(../images/home/main.png);
+	background-repeat:no-repeat;
+	width: 632px;
+	height: 439px;
+	position:absolute;
+	display:block;
+	top: 80px;
+	left: 183px;
+	background-size: 100% 100%;
+}
+#home img{
+	position:absolute;
+}
+.playBtn{
+	top: 510px;
+	left: 385px;	
+	width: 305PX;
+}
+.introBtn,.play24Btn,.leadBtn{
+	top: 590px;
+}
+.introBtn{
+	left: 75PX;
+	width: 306PX;
+}
+.play24Btn{
+	left: 384px;
+	width: 306PX;
+}
+.leadBtn{
+	left: 707px;
+	width: 277px;
+}
+/*==========================================play=======================================================*/
+.questionSubHeader div {
+display: inline-block;
+font-size: 42px;
+}
