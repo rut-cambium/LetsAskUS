@@ -18,7 +18,7 @@ video {
 }
 /*---------------------------------------------------home------------------------------------------------*/
 #home {
-	display: none;
+	display: block;
 }
 span.logoHome {
 	background-image: url(../images/home/main.png);

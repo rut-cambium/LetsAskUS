@@ -43,8 +43,10 @@ function init() {
 function showAnswers(id){
      console.log("showAnswers " + id);
      //show skype banner
-     $(".banner").show();
+     $("#card").removeClass("flop");
      $("#Q" + id).hide();
+     $(".banner").show();
+     
 
      //init the value, time, total by Q1
      initHeaderQuestionValue(id);
@@ -60,8 +62,10 @@ function showAnswers(id){
 function showQuestion(id){
      console.log("showQuestion " + id);
      
-     //show Question
+     //show Question with flop
      $("#Q"+id).show();
+     $("#card").addClass("flop");
+     
      //start timer
      startTimer(id);
       //hide the cover answers - prevent click until question display

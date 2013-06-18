@@ -20,7 +20,10 @@ function startPlay(type){
 
     //if video play
     if(type == "video"){
-          $("#video")[0].play();
+          video.play();
+          setTimeout(function(){
+              video.play();
+          },500);
           //init the value, time, total by Q1
           initHeaderQuestionValue(1);
           triggerVideoEvents();
@@ -29,4 +32,12 @@ function startPlay(type){
     
     //if 24/7
 
+}
+
+function goToHome(){
+    $("section").hide();
+    $("#home").show();
+    video.pause();
+    video.currentTime = 0;
+    $(".movPlace").hide();
 }
