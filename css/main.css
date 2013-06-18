@@ -1,3 +1,76 @@
+/* CSS Document */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*css reset*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------------------------------------------cf-------------------------------------------------------------------*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
 @font-face {
 	font-family: 'Conv_HEADOH__';
 	src: url('../fonts/HEADOH__.eot');
@@ -21,10 +94,10 @@
 }
 /*  play section*/
 #play{
-    background-image: url('../images/innerBg.png');
-background-size: 82% 86%;
-background-repeat: no-repeat;
-background-position: 51% 77%;
+    background-image: url('../images/innerBg.png'),url('../images/play/border_play.png');
+	background-size: 82% 86%;
+	background-repeat: no-repeat;
+	background-position: 51% 77%;
 }
 /*   questions section  */
 #question{
@@ -32,36 +105,40 @@ background-position: 51% 77%;
 }
 .questionSubHeader{
    font-family: 'Conv_HEADTH__';
-font-size: 20px;
+
 color: white;
-height: 63px;
-width: 709px;
-margin: auto;
+
+   height: 15%;
+
+   width: 100%;
+
+   margin: 9.23% 0% 0 7%;
 }
 .questionSubHeader .val{
      font-family: 'Conv_HEADOH__';
-     padding-left: 14px;
+     padding-left: 7%;
 }
-.questionSubHeader div{
-    display: inline-block;
-font-size: 43px;
-}
+
 .questionSubHeader .total{
-   padding-left: 60px;
-width: 187px;
+   padding-left: 11%;
+
+   width: 27%;
 }
 .questionSubHeader .value{
     padding-left: 0px;
-width: 200px;
+
+    width: 26%;
 }
 .questionSubHeader .time{
-    padding-left: 56px;
-width: 200px;
+    padding-left: 5%;
+
+    width: 20%;
 }
 .question{
     
-    width: 735px;
-height: 87px;
+    width: 94%;
+
+    height: 21%;
 background-size: 100% 100%;
 margin: auto;
 }
@@ -70,15 +147,20 @@ margin: auto;
     background-image: url('../images/q/Q1.png');
 }
 .questionWrap{
-    margin-top: 300px;
-width: 782px;
+    top: 35%;
+
+    width: 80%;
 margin: auto;
-padding-top: 344px;
+
+    position: absolute;
+    left: 10%;
+    height: 56%;
 }
 .banner{
-    display: none;
-     width: 735px;
-height: 87px;
+     
+    width: 94%;
+
+    height: 21%;
 background-size: 100% 100%;
 margin: auto;
 
@@ -89,3 +171,46 @@ margin: auto;
     
 }
 
+/*================================================================css===================================================*/
+html,body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+body{
+	background-image:url(../images/bg.jpg);
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+section{
+	display:block;
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.hide{
+	display:hide;
+}
+.show{
+	display:block;
+}
+/*============================================================play====================================================================*/
+.home_btn{
+	position:absolute;
+	width: 6%;
+	height: 7%;
+	right: 3%;
+	top: 1%;
+}
+.logoPlay{
+	display:block;
+	background-image:url(../images/play/logo.png);
+	position:absolute;
+	width: 37%;
+	height: 39%;
+	background-size: 100% 100%;
+	top: 0%;
+	left: 32%;
+	background-repeat: no-repeat;
+}
