@@ -8,6 +8,7 @@
 	border:solid 6px #1f59a2;
 	display:none;
 	overflow: hidden;
+	z-index:500;
 }
 video{
 	width:270px; 
