@@ -86,19 +86,19 @@ function timerEnd(){
     console.log("show waiting screen");
 }
 
-function triggerVideoEventsVideo(){
+function triggerVideoEvents(){
     setInterval(function() {
         var curTimeTemp = video.currentTime.toString();
         curTime = curTimeTemp.split(".")[0];
         //console.log("curTime" + curTime);
         switch(curTime) {
-            case "14":
-                console.log("00:14" + curTime);
+            case "13":
+                console.log("00:13" + curTime);
                 $("body").trigger("showAnswers",[1]);
                 break;
 
-            case "18":
-                console.log("00:18" + curTime);
+            case "17":
+                console.log("00:17" + curTime);
                 $("body").trigger("showQuestion",[1]); break;
             case "106":
                 console.log("01:46" + curTime); 
