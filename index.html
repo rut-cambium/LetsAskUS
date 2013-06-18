@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ASK USA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="js/main.js"></script>
+    <script src="js/videoAndTimerManager.js"></script>
+<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width:1399px)" href="css/styleIpad3.css" />
+<link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/styleIpadNormal.css" />
+    <link rel="stylesheet"href="css/main.css" />
+   
+</head>
+<body>
+<div class="movPlace">
+	<video id="video">
+	  <source src="media/full.mp4" type="video/mp4">
+	Your browser does not support the video tag.
+	</video>
+</div>
+    <section id="home" class="show">
+	
+	<span class="logoHome"></span>
+	
+	<img src="images/home/play_now.png" class="playBtn" onclick="showPlayPage('video')">
+	<img src="images/home/intro.png" class="introBtn">
+	<img src="images/home/play24.png" class="play24Btn" onclick="showPlayPage('novideo')">
+	<img src="images/home/lead.png" class="leadBtn">
+	
+</section>
+    <!---end home--->
+ <section id="play">
+    
+    <section id="question" class="hide"> 
+
+    <div id="Q1" class="questionWrap">
+    
+        <header class="questionSubHeader">
+            <div class="value">
+                <span>VALUE</span>
+                <span class="val">$100</span>
+            </div>
+            <div class="time">
+                <span>TIME</span>
+                <span class="val">00:10</span>
+            </div>
+            <div class="total">
+                <span>TOTAL</span>
+                <span class="val">$2400</span>
+            </div>
+        </header>
+
+        <div class="question">
+        
+        </div>
+        <div class="banner">
+        
+        </div>
+
+        <div class="answers">
+            <div class="answer"></div>
+        </div>
+
+    </div>
+
+    </section>
+    <!---end question--->
+    <section id="share" class="hide"> 
+    </section>
+
+ </section>
+<!---end share--->
+</body>
+</html>
