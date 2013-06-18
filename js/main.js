@@ -8,7 +8,7 @@ function showPlayPage(type){
     }
 
      $("#home").hide();
-    $("#question").show();
+    $("#play").show();
 
     startPlay(type);
 

@@ -1,58 +1,82 @@
-.movPlace{
-	position:absolute;
-	width:270px;
+.movPlace {
+	position: absolute;
+	width: 270px;
 	height: 153px;
-	top:30px;
-	left:30px;
-	border-radius:10px;
-	border:solid 6px #1f59a2;
-	display:none;
+	top: 30px;
+	left: 30px;
+	border-radius: 10px;
+	border: solid 6px #1f59a2;
+	display: none;
 	overflow: hidden;
-	z-index:500;
+	z-index: 500;
 }
-video{
-	width:270px; 
-	height:225px;
-	position:absolute;
+video {
+	width: 270px;
+	height: 225px;
+	position: absolute;
 	top: -35px;
 }
 /*---------------------------------------------------home------------------------------------------------*/
- span.logoHome{
-	background-image:url(../images/home/main.png);
-	background-repeat:no-repeat;
+#home {
+	display: none;
+}
+span.logoHome {
+	background-image: url(../images/home/main.png);
+	background-repeat: no-repeat;
 	width: 632px;
 	height: 439px;
-	position:absolute;
-	display:block;
+	position: absolute;
+	display: block;
 	top: 80px;
 	left: 183px;
 	background-size: 100% 100%;
 }
-#home img{
-	position:absolute;
+#home img {
+	position: absolute;
 }
-.playBtn{
+.playBtn {
 	top: 510px;
-	left: 385px;	
+	left: 385px;
 	width: 305PX;
 }
-.introBtn,.play24Btn,.leadBtn{
+.introBtn, .play24Btn, .leadBtn {
 	top: 590px;
 }
-.introBtn{
+.introBtn {
 	left: 75PX;
 	width: 306PX;
 }
-.play24Btn{
+.play24Btn {
 	left: 384px;
 	width: 306PX;
 }
-.leadBtn{
+.leadBtn {
 	left: 707px;
 	width: 277px;
 }
 /*==========================================play=======================================================*/
 .questionSubHeader div {
-display: inline-block;
-font-size: 42px;
+	display: inline-block;
+	font-size: 42px;
+}
+/*======================================================waiting=================================*/
+.waitingTextWrap {
+	font-size: 67px;
+	box-shadow: #42b2fd 0px 0px 10px 1px;
+}
+/*=====================================sahre===================================*/
+.resev{
+	font-family: Conv_HEADTH__;	
+	color: #fff;
+	font-size: 42px;
+	text-align: center;
+}
+.score{
+	font-family: Conv_HEADoH__;  color: #fff;  
+	font-size: 55px;  text-align: center;	
+	text-shadow: #000 5px 4px 1px;
+}
+.better{
+	font-family: Conv_HEADTH__;  color: #fff;  
+	font-size: 39px;  text-align: center;	
 }
