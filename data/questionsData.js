@@ -1,6 +1,6 @@
  var data =  {
      'question1' : {
-        "value" : '300',
+        "value" : '100',
         "question" : "Where did men in their 30's say they'd prefer to break up with a girlfriend?",
         "numOfAnswers" :'2',
         "ans1": 'Her House',
@@ -11,7 +11,7 @@
         },
     
     'question2' : {
-        "value" : '300',
+        "value" : '400',
         "question" : 'Who did married men say would be the worst person to run into during a romantic weekend gataway',
         "numOfAnswers" :'3',
         "ans1": 'Boss',
@@ -23,7 +23,7 @@
         "percentAns1":'51'
         },
     'question3' :{
-     "value" : '300',
+     "value" : '2000',
     "question" : 'What did chinese food lovers say is the most annoying delivery order mishap?',
     "numOfAnswers" :'4',
     "ans1": 'Arrives Late',
@@ -38,7 +38,7 @@
     },
 
     'question4' :{
-        "value" : '300',
+        "value" : '5000',
         "question" : "Which celebrity brothers did men say they'd least like to spend thanksgiving with?",
         "numOfAnswers" :'4',
         "ans1": 'Jonas',

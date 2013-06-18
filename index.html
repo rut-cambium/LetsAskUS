@@ -7,6 +7,7 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="js/main.js"></script>
     <script src="js/videoAndTimerManager.js"></script> 
+    <script src="data/questionsData.js"></script> 
  <link rel="stylesheet"href="css/main.css" />
 <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width:1399px)" href="css/normal.css" />
 <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/iped3.css" />
@@ -20,14 +21,22 @@
 	Your browser does not support the video tag.
 	</video>
 </div>
+
+<div id="waitingScreen" class="waiting">
+    <div class="cover"></div>
+    <div class="waitingTextWrap">
+        <span>waiting for the show</span>
+        <div class="dots">...</div>
+    </div>
+</div>
     <section id="home" class="show">
 	
 	<span class="logoHome"></span>
 	
-	<img src="images/home/play_now.png" class="playBtn" onclick="showPlayPage('video')">
-	<img src="images/home/intro.png" class="introBtn">
-	<img src="images/home/play24.png" class="play24Btn" onclick="showPlayPage('novideo')">
-	<img src="images/home/lead.png" class="leadBtn">
+	<img src="images/home/play_now.png" class="playBtn btn" ontouchend="showPlayPage('video')">
+	<img src="images/home/intro.png" class="introBtn btn">
+	<img src="images/home/play24.png" class="play24Btn btn" ontouchend="showPlayPage('novideo')">
+	<img src="images/home/lead.png" class="leadBtn btn">
 	
 </section>
     <!---end home--->
@@ -42,15 +51,15 @@
         <header class="questionSubHeader">
             <div class="value">
                 <span>VALUE</span>
-                <span class="val">$100</span>
+                <span class="val"></span>
             </div>
             <div class="time">
                 <span>TIME</span>
-                <span class="val">00:10</span>
+                <span class="val"></span>
             </div>
             <div class="total">
                 <span>TOTAL</span>
-                <span class="val">$2400</span>
+                <span class="val"></span>
             </div>
         </header>
 		<div class="filper">
