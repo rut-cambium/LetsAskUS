@@ -21,15 +21,7 @@
 	Your browser does not support the video tag.
 	</video>
 </div>
-
-<div id="waitingScreen" class="waiting">
-    <div class="cover"></div>
-    <div class="waitingTextWrap">
-        <span>waiting for the show</span>
-        <div class="dots">...</div>
-    </div>
-</div>
-    <section id="home" class="show">
+<section id="home">
 	
 	<span class="logoHome"></span>
 	
@@ -44,7 +36,7 @@
  	<img src="images/play/home_btn.png" class="home_btn">
  	<span class="logoPlay"></span>
     
-    <section id="question" class="hide"> 
+    <section id="question"> 
 
     <div  class="questionWrap">
     
@@ -63,35 +55,37 @@
             </div>
         </header>
 		<div class="filper">
-        	<div id="Q1" class="question" ></div>
-			<div id="Q2" class="question" ></div>
-			<div id="Q3" class="question" ></div>
-			<div id="Q4" class="question" ></div>
-			<div id="Q5" class="question" ></div>
-			<div class="banner"></div>
+			<div id="card">
+				<div id="Q1" class="question" ></div>
+				<div id="Q2" class="question" ></div>
+				<div id="Q3" class="question" ></div>
+				<div id="Q4" class="question" ></div>
+				<div id="Q5" class="question" ></div>
+				<div class="banner show"></div>
+			</div>
 		</div>
 
         <div class="answers">
             <div class="answer" id="ans1">
-				<div class="answerFilp pos1 a1" >
+				<div class="answerFilp pos1" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos2 a2" >
+				<div class="answerFilp pos2" >
 					<div class="firstAns rightAns"></div>
 					<div class="result rightAnsp"></div>
 				</div>
 			</div><!--answer1-->
 			<div class="answer" id="ans2">
-				<div class="answerFilp pos1 a1" >
+				<div class="answerFilp pos1" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos2 a2" >
+				<div class="answerFilp pos2" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos3 a3" >
+				<div class="answerFilp pos3middle" >
 					<div class="firstAns rightAns"></div>
 					<div class="result rightAnsp"></div>
 				</div>
@@ -102,67 +96,87 @@
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos2 a2" >
+			</div><!--answer2-->
+			<div class="answer" id="ans3">
+				<div class="answerFilp pos1" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos3 a3" >
-					<div class="firstAns rightAns"></div>
-					<div class="result rightAnsp"></div>
+				<div class="answerFilp pos2" >
+					<div class="firstAns"></div>
+					<div class="result"></div>
 				</div>
-                <div class="answerFilp pos4 a4" >
+				<div class="answerFilp pos3" >
+					<div class="firstAns"></div>
+					<div class="result"></div>
+				</div>
+				<div class="answerFilp pos4" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
 			</div><!--answer3-->
-             <div class="answer" id="ans4">
-				<div class="answerFilp pos1 a1" >
+				<div class="answer" id="ans4">
+				<div class="answerFilp pos1" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos2 a2" >
-					<div class="firstAns rightAns"></div>
-					<div class="result rightAnsp"></div>
-				</div>
-				<div class="answerFilp pos3 a3" >
+				<div class="answerFilp pos2" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-                <div class="answerFilp pos4 a4" >
+				<div class="answerFilp pos3" >
+					<div class="firstAns"></div>
+					<div class="result"></div>
+				</div>
+				<div class="answerFilp pos4" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
 			</div><!--answer4-->
-             <div class="answer" id="ans5">
-				<div class="answerFilp pos1 a1" >
+			<div class="answer" id="ans5">
+				<div class="answerFilp pos1" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos2 a2" >
+				<div class="answerFilp pos2" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
-				<div class="answerFilp pos3 a3" >
-					<div class="firstAns rightAns"></div>
-					<div class="result rightAnsp"></div>
+				<div class="answerFilp pos3" >
+					<div class="firstAns"></div>
+					<div class="result"></div>
 				</div>
-                <div class="answerFilp pos4 a4" >
+				<div class="answerFilp pos4" >
 					<div class="firstAns"></div>
 					<div class="result"></div>
 				</div>
 			</div><!--answer5-->
         </div>
 		<div class="coverAnswer"></div>
-		<div class="continue">
-		</div>
     </div>
 	</ar>
     </section>
     <!---end question--->
-    <section id="share" class="hide"> 
-    </section><!---end share--->
-
+    
  </section><!--end play-->
 
+<section id="share"> 
+	<span class="logoPlay"></span>
+	<div class="camera"></div>
+	<div class="contect">
+		<p class="resev">ON TONIGHT’S SHOW YOU SCORED:</p>
+		<p class="score">$4400</p>
+		<p class="better">better than <span>91%</span> of the players</p>
+		<div class="continue"></div>
+		<div class="exit"></div>
+	</div>
+</section><!---end share--->
+<div id="waitingScreen" class="waiting">
+
+    <div class="waitingTextWrap">
+        <span>waiting for the show</span>
+        <div class="dots">...</div>
+    </div>
+</div>
 </body>
 </html>
