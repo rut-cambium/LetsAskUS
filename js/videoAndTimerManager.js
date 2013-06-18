@@ -1,72 +1,92 @@
 var video;
 var time = 10;
 var total = 0;
+var value;
 $(document).ready(function() {
     init();
 });
 
-function init(){
-   video  = document.getElementById("video");
+function init() {
+    video = document.getElementById("video");
 
-   $("body").bind("showAnswers", function(e, id) {
-      showAnswers(id)
-   });
+    $("body").bind("showAnswers", function(e, id) {
+        showAnswers(id)
+    });
 
-   $("body").bind("showQuestion", function(e, id) {
-      showQuestion(id)
-   });
+    $("body").bind("showQuestion", function(e, id) {
+        showQuestion(id)
+    });
 
     $("body").bind("showPrecents", function(e, id) {
-      showPrecents(id)
-   });
+        showPrecents(id)
+    });
 
-   $("body").bind("hideAnswer", function(e, id) {
-      hideAnswer(id)
-   });
+    $("body").bind("hideAnswer", function(e, id) {
+        hideAnswer(id)
+    });
 
-   $("body").bind("timerEnd", function(e, id) {
-       timerEnd(id);
-   });
+    $("body").bind("timerEnd", function(e, id) {
+        timerEnd(id);
+    });
+
+    //init the click ctns animation
+    $(".firstAns").addClass("btn");
+    $(".result").addClass("btn");
+    
+    //init the right answer event
+    $("body").delegate(".rightAns","touchend",function(){
+        rightAnsClicked(this);
+    })
 }
+
 
 function showAnswers(id){
      console.log("showAnswers " + id);
      //show skype banner
-     $("#Q" + id + " .banner").show();
-     $("#Q" + id + " .question").hide();
+     $(".banner").show();
+     $("#Q" + id).hide();
 
      //init the value, time, total by Q1
      initHeaderQuestionValue(id);
 
+     //show the cover answers - prevent click until question display
+     $(".coverAnswer").show();
+
      //show answers
-      $("#Q" + id + " .answers").show();
+      $("#ans" + id).show();
+      $("#ans" + id).show();
 }
 
 function showQuestion(id){
      console.log("showQuestion " + id);
      
      //show Question
-     $("#Q" + id + " .question").show();
+     $("#Q"+id).show();
      //start timer
      startTimer(id);
+      //hide the cover answers - prevent click until question display
+     $(".coverAnswer").hide();
 }
 
 function showPrecents(id){
      console.log("showPrecents " + id);
      $("#waitingScreen").hide();
      //hide answers, show answers with perctenge
-
-     //show the coorect answer
+     $("#ans" + id).hide();
+     $("#ans" + id).show();
+    
+     //show the correct answer
 
      //set total value
+      $(".questionSubHeader .total .val").text("$"+total);
 }
 
 function hideAnswer(id){
      console.log("hideAnswer " + id);
 
      //hide the answers
-     $("#Q" + id + " .answers").hide();
-     $("#Q" + id + " .question").hide();
+     $("#ans" + id).hide();
+     $("#Q" + id).hide();
 }
 
 function startTimer(id){
@@ -75,7 +95,7 @@ function startTimer(id){
         if(time > 0) {
             var timeDisplay = timer();
             console.log(timeDisplay);
-            $("#Q" + id + " .time .val").text(timeDisplay);
+            $(".questionSubHeader .time .val").text(timeDisplay);
         }
         else {
             window.clearInterval(timeInterval);
@@ -196,10 +216,11 @@ function triggerVideoEvents(){
 }
 
 function initHeaderQuestionValue(id){
-    var value = getValue(id);
-    $("#Q" + id + " .value .val").text("$"+value);
-    $("#Q" + id + " .time .val").text("00:10");
-    $("#Q" + id + " .total .val").text("$"+total);
+    var valueTemp = getValue(id);
+    value = valueTemp;
+    $(".questionSubHeader .value .val").text("$"+valueTemp);
+    $(".questionSubHeader .time .val").text("00:10");
+    $(".questionSubHeader .total .val").text("$"+total);
     
 }
 
@@ -209,3 +230,6 @@ function getValue(numOfQ){
     return currentData.value;
 }
 
+function rightAnsClicked(){
+    total += parseInt(value);
+}
