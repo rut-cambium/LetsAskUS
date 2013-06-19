@@ -31,6 +31,10 @@ function init() {
         timerEnd(id);
     });
 
+    $("body").bind("showRisk", function(e, id) {
+        showAndInitRiskPage();
+    });
+
     //init the click ctns animation
     $(".firstAns").addClass("btn");
     $(".result").addClass("btn");
@@ -181,59 +185,48 @@ function triggerVideoEvents(){
                 $("body").trigger("showAnswers",[2]);
                 break;
             case "133":
-                console.log("00:18" + curTime);
                 $("body").trigger("showQuestion",[2]); break;
             case "187":
-                console.log("01:46" + curTime); 
                 $("body").trigger("showPrecents",[2]);
                 break;
            case "192":
-                console.log("01:49" + curTime); 
                 $("body").trigger("hideAnswer",[2]);
                 break;
            case "225":
-                console.log("00:14" + curTime);
                 $("body").trigger("showAnswers",[3]);
                 break;
             case "233":
-                console.log("00:18" + curTime);
                 $("body").trigger("showQuestion",[3]); break;
             case "303":
-                console.log("01:46" + curTime); 
                 $("body").trigger("showPrecents",[3]);
                 break;
-           case "308":
-                console.log("01:49" + curTime); 
+           case "308": 
                 $("body").trigger("hideAnswer",[3]);
                 break;
            case "324":
-                console.log("00:14" + curTime);
                 $("body").trigger("showAnswers",[4]);
                 break;
             case "338":
-                console.log("00:18" + curTime);
                 $("body").trigger("showQuestion",[4]); break;
             case "403":
                 console.log("01:46" + curTime); 
                 $("body").trigger("showPrecents",[4]);
                 break;
            case "408":
-                console.log("01:49" + curTime); 
                 $("body").trigger("hideAnswer",[4]);
                 break;
+           case "460": 
+                $("body").trigger("showRisk",[4]);
+                break;
            case "510":
-                console.log("00:14" + curTime);
                 $("body").trigger("showAnswers",[5]);
                 break;
             case "516":
-                console.log("00:18" + curTime);
                 $("body").trigger("showQuestion",[5]); break;
-            case "588":
-                console.log("01:46" + curTime); 
+            case "588": 
                 $("body").trigger("showPrecents",[5]);
                 break;
            case "593":
-                console.log("01:49" + curTime); 
                 $("body").trigger("hideAnswer",[5]);
                 break;
         }
@@ -304,8 +297,10 @@ function triggerNoVideoEvents(){
                 $("body").trigger("showPrecents", [4]);
                 break;
             case 75:
-                console.log("01:49" + curTimeNoVideo);
-                $("body").trigger("hideAnswer", [4]);
+                 $("body").trigger("hideAnswer", [4]);
+                break;
+            case 76:
+                 $("body").trigger("showRisk", [4]);
                 break;
             case 76:
                 console.log("00:14" + curTimeNoVideo);
@@ -354,4 +349,9 @@ function answerClicked(answer){
 
 function rightAnsClicked(){
     total += parseInt(value);
+}
+
+function showAndInitRiskPage(){
+    $(".answers").hide();
+    $(".riskPage").show();
 }
