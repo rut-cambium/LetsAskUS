@@ -69,15 +69,15 @@ html[xmlns] .clearfix {
 }
 .btn:hover{
   
-    -webkit-transform:scale(0.99,0.99);
+    /*-webkit-transform:scale(0.99,0.99);*/
     
 }
 /*  play section*/
 #play {
-	background-image: url('../images/play/border_play.png');
-	background-size: 82% 86%;
+	background-image: url('../images/share_bg_gif.gif');
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-position: 51% 77%;
+	
 }
 /*   questions section  */
 #question {
@@ -136,9 +136,9 @@ html, body {
 	position: relative;
 }
 body {
-	background-image: url(../images/bg.jpg);
+	/*background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 100%;*/
 }
 section {
 	width: 100%;
@@ -147,6 +147,11 @@ section {
 }
 #play, #share {
 	display: none;
+}
+#home {
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 .hide {
 	display: hide;
@@ -526,10 +531,10 @@ section {
 }
 /*==================================================share===================================================*/
 #share {
-	background-image: url('../images/play/border_play.png');
-	background-size: 82% 86%;
+	background-image: url('../images/share_bg_gif.gif');
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-position: 51% 77%;
+	/*background-position: 51% 77%;*/
 }
 #share .logoPlay {
 	display: block;
@@ -552,10 +557,10 @@ section {
 }
 .contect {
 	width: 69%;
-	height: 38%;
-	position: absolute;
-	top: 55%;
-	left: 16%;
+height: 38%;
+position: absolute;
+top: 56%;
+left: 15%;
 }
 .continue {
 	background-image: url(../images/continue.png);
@@ -604,4 +609,13 @@ background-size: 100% 100%;
 position: absolute;
 left: 28%;
 top: 131%;
+}
+
+
+.secretGoToShare{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    width: 100px;
+    height: 100px;
 }
