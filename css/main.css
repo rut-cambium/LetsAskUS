@@ -67,6 +67,9 @@ html[xmlns] .clearfix {
 	font-weight: normal;
 	font-style: normal;
 }
+.btn:hover {
+	-webkit-transform: scale(0.99, 0.99);
+}
 /*  play section*/
 #play {
 	background-image: url('../images/play/border_play.png');
@@ -147,7 +150,7 @@ section {
 	display: hide;
 }
 .show {
-	display: block ;
+	display: block;
 }
 /*============================================================play====================================================================*/
 .home_btn {
@@ -178,15 +181,15 @@ section {
 	margin-left: 3%;
 }
 #card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: all 1s ease-in-out;
-  transform-style: preserve-3d;
-  transition: all 1s ease-in-out;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
-#card.flop{
+#card.flop {
 	-webkit-transform: rotateX(-180deg);
 	transform: rotateX(-180deg);
 }
@@ -196,17 +199,13 @@ section {
 	left: 0;
 	z-index: 900;
 	height: 100%;
-
 	-webkit-transform: rotateX(-180deg);
 	-webkit-backface-visibility: hidden;
-	
 	backface-visibility: hidden;
 	transform: rotateX(-180deg);
 	width: 100%;
 	display: none;
 }
-
-
 .question.show, answer.show {
 	display: block;
 }
@@ -217,23 +216,20 @@ section {
 	z-index: 800;
 	width: 100%;
 	height: 100%;
-	
 	-webkit-transform: rotateX(0deg);
 	-webkit-backface-visibility: hidden;
-	
 	transform: rotateX(0deg);
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
 }
-.filper.filp .question{
+.filper.filp .question {
 	-webkit-transform: rotateX(0deg);
 	transform: rotateX(0deg);
-} 
-.filper.filp .banner{
+}
+.filper.filp .banner {
 	-webkit-transform: rotateX(-180deg);
 	transform: rotateX(-180deg);
-} 
-
+}
 #Q1 {
 	background-image: url('../images/q/Q1.png');
 }
@@ -254,36 +250,54 @@ section {
 	width: 100%;
 	height: 41%;
 	top: 55%;
-    z-index: 3;
+	z-index: 3;
 }
-.coverAnswer{
-     position: absolute;
+.coverAnswer {
+	position: absolute;
 	width: 100%;
 	height: 41%;
 	top: 55%;
-    z-index: 5;
+	z-index: 5;
 }
 .answer {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	display: none;
+	-webkit-perspective: 1000;
+	perspective: 1000;
 }
-.result{
-    /*display: none;*/
+.result {
+/*display: none;*/
 }
-
+.answerFilp {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
+}
 .answerFilp.pos1 {
 	width: 44%;
 	height: 44%;
 	position: absolute;
 	left: 6%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
 .answerFilp.pos2 {
 	width: 44%;
 	height: 44%;
 	position: absolute;
 	left: 50%;
+ -webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
 .answerFilp.pos3middle {
 	width: 44%;
@@ -291,6 +305,10 @@ section {
 	position: absolute;
 	left: 29%;
 	top: 45%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
 .answerFilp.pos3 {
 	width: 44%;
@@ -298,6 +316,10 @@ section {
 	position: absolute;
 	left: 6%;
 	top: 45%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
 .answerFilp.pos4 {
 	width: 44%;
@@ -305,6 +327,10 @@ section {
 	position: absolute;
 	left: 50%;
 	top: 45%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 1s ease-in-out;
+	transform-style: preserve-3d;
+	transition: all 1s ease-in-out;
 }
 .firstAns {
 	position: absolute;
@@ -464,7 +490,7 @@ section {
 	display: inline-block;
 }
 /*==================================================share===================================================*/
-#share{
+#share {
 	background-image: url('../images/play/border_play.png');
 	background-size: 82% 86%;
 	background-repeat: no-repeat;
@@ -482,36 +508,36 @@ section {
 	background-repeat: no-repeat;
 }
 .camera {
-width: 28%;
-height: 28%;
-position: absolute;
-background: #fff;
-top: 25%;
-left: 36%;
+	width: 28%;
+	height: 28%;
+	position: absolute;
+	background: #fff;
+	top: 25%;
+	left: 36%;
 }
-.contect{
-width: 69%;
-height: 38%;
-position: absolute;
-top: 55%;
-left: 16%;
+.contect {
+	width: 69%;
+	height: 38%;
+	position: absolute;
+	top: 55%;
+	left: 16%;
 }
-.continue{
-	background-image:url(../images/continue.png);
-	background-repeat:no-repeat;
+.continue {
+	background-image: url(../images/continue.png);
+	background-repeat: no-repeat;
 	width: 44%;
 	height: 24%;
-	background-size:100% 100%;
+	background-size: 100% 100%;
 	position: absolute;
 	left: 28%;
 	top: 51%;
 }
-.exit{
-	background-image:url(../images/exit.png);
-	background-repeat:no-repeat;
+.exit {
+	background-image: url(../images/exit.png);
+	background-repeat: no-repeat;
 	width: 26%;
 	height: 17%;
-	background-size:100% 100%;
+	background-size: 100% 100%;
 	position: absolute;
 	top: 77%;
 	left: 35%;
