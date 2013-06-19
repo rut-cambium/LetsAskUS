@@ -48,3 +48,12 @@ function goToHome(){
     $(".movPlace").hide();
 
 }
+
+function goToRisk(){
+    $("#home").hide();
+    $("#play").show();
+    $(".riskPage").show();
+    $(".answers").hide();
+    $(".filper").hide();
+    $(".coverAnswer").hide();
+}

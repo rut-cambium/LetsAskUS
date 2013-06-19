@@ -44,6 +44,10 @@ function init() {
         
         answerClicked($(this));
     });
+    //init the risk slider
+    $('input[type="range"]').change(function(e, i) {
+        console.log($(this).val());
+    });
 }
 
 
@@ -361,4 +365,7 @@ function rightAnsClicked(){
 function showAndInitRiskPage(){
     $(".answers").hide();
     $(".riskPage").show();
+
+    $(".riskPage .riskVal").text("$"+total);
+    $("#riskSlide").attr("max", "total");
 }
