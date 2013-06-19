@@ -68,9 +68,11 @@ html[xmlns] .clearfix {
 	font-style: normal;
 }
 .btn:hover{
-  
     /*-webkit-transform:scale(0.99,0.99);*/
-    
+	transform:scale(0.99,0.99); 
+}
+.firstAns.btn:hover{
+opacity:0.75;
 }
 /*  play section*/
 #play {
@@ -531,6 +533,8 @@ section {
 }
 /*==================================================share===================================================*/
 #share {
+	background-image: url('../images/play/border_play.png');
+	background-size: 82% 86%;
 	background-image: url('../images/share_bg_gif.gif');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
