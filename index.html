@@ -7,6 +7,7 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="js/main.js"></script>
    <!-- <script src="js/videoAndTimerManager.js"></script> -->
+   <script src="js/videoAndTimerManager.js"></script>
     <script src="data/questionsData.js"></script> 
  <link rel="stylesheet"href="css/main.css" />
 <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width:1399px)" href="css/normal.css" />
@@ -103,7 +104,8 @@
 				</div>
 				<div class="answerFilp pos3" >
 					<div class="firstAns rightAns"></div>
-					<div class="result"></div>
+					
+					<div class="result rightAnsp"></div>
 				</div>
 				<div class="answerFilp pos4" >
 					<div class="firstAns"></div>
@@ -117,7 +119,8 @@
 				</div>
 				<div class="answerFilp pos2" >
 					<div class="firstAns rightAns"></div>
-					<div class="result"></div>
+					
+					<div class="result rightAnsp"></div>
 				</div>
 				<div class="answerFilp pos3" >
 					<div class="firstAns"></div>
@@ -139,7 +142,8 @@
 				</div>
 				<div class="answerFilp pos3" >
 					<div class="firstAns rightAns"></div>
-					<div class="result"></div>
+					
+					<div class="result rightAnsp"></div>
 				</div>
 				<div class="answerFilp pos4" >
 					<div class="firstAns"></div>
@@ -151,7 +155,8 @@
 
         <div class="riskPage">
             <div>
-               <input type="range" min="0" value="0" step="10" max="5000">
+            
+               <input id="riskSlide" type="range" min="0" value="0" step="10" max="5000">
 			   <div class="rnageSelect"></div>
 			   <span class="riskVal">600$</span>
             </div>

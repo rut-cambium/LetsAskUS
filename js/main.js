@@ -3,7 +3,7 @@ function showPlayPage(type){
     
     if (type == "video"){
         $(".movPlace").show();
-        playType = video;
+        playType = "video";
     }
     else{
         $(".movPlace").hide();
@@ -47,4 +47,13 @@ function goToHome(){
     video.currentTime = 0;
     $(".movPlace").hide();
 
+}
+
+function goToRisk(){
+    $("#home").hide();
+    $("#play").show();
+    $(".riskPage").show();
+    $(".answers").hide();
+    $(".filper").hide();
+    $(".coverAnswer").hide();
 }

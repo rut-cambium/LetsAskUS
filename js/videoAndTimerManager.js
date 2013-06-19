@@ -44,6 +44,10 @@ function init() {
         
         answerClicked($(this));
     });
+    //init the risk slider
+    $('input[type="range"]').change(function(e, i) {
+        console.log($(this).val());
+    });
 }
 
 
@@ -60,10 +64,14 @@ function showAnswers(id){
 
      //show the cover answers - prevent click until question display
      $(".coverAnswer").show();
-
+    
+     //
      //show answers
       $("#ans" + id).show();
-      $("#ans" + id).show();
+        //display the animate
+      $("#ans" + id + " .answerFilp").show();
+      $("#ans" + id + " .answerFilp").removeClass("openP");
+      $("#ans" + id + " .answerFilp").addClass("openA");
 }
 
 function showQuestion(id){
@@ -91,9 +99,12 @@ function showPrecents(id){
      
      
      //hide answers, show answers with perctenge
-     $("#ans" + id).hide();
-     $("#ans" + id).show();
-    
+    // $("#ans" + id).hide();
+    // $("#ans" + id).show();
+      //display the animate 
+      $("#ans" + id + " .answerFilp").removeClass("openA");
+      $("#ans" + id + " .answerFilp").addClass("openP");
+
      //set total value
       $(".questionSubHeader .total .val").text("$"+total);
 }
@@ -354,4 +365,7 @@ function rightAnsClicked(){
 function showAndInitRiskPage(){
     $(".answers").hide();
     $(".riskPage").show();
+
+    $(".riskPage .riskVal").text("$"+total);
+    $("#riskSlide").attr("max", "total");
 }
