@@ -63,14 +63,45 @@ span.logoHome {
 .resev{
 	font-family: Conv_HEADTH__;	
 	color: #fff;
-	font-size: 89px;
+	font-size: 65px;
 	text-align: center;
+	font-weight: normal;
 }
 .score{
 	font-family: Conv_HEADoH__;  color: #fff;  
-	font-size: 109px;  text-align: center;	
+	font-size: 99px;  text-align: center;	
 	text-shadow: #000 11px 8px 1px;
 }
 .better{
-	font-family: Conv_HEADTH__;  color: #fff;  font-size: 89px;  text-align: center;	
+	font-family: Conv_HEADTH__;  color: #fff;  
+	font-size: 69px;  text-align: center;	
+}
+/*========================================risk=====================================================*/
+input[type="range"] {
+	width: 71.5%;
+	position: absolute;
+	top: 39%;
+	left: 12.5%;
+	background-image: url(../img/rate/rang_slid.png);
+	background-repeat: no-repeat;
+	height: 22.5%;
+	border-radius: 58px;
+	-webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image:url(../images/risk/houseicon.png);
+    width: 150px;
+    height: 150px;
+ background-repeat:no-repeat;
+  background-size:100% 100%;
+}
+.riskVal {
+	font-family: Conv_HEADOH__;
+	position: absolute;
+	color: #fff;
+	top: 32%;
+	right: 2%;
+	font-size: 64px;
+	width: 12%;
 }

@@ -581,4 +581,27 @@ section {
 /*------------------------------risk page-------------------------*/
 .riskPage{
     display: none;
+	position: absolute;
+	top: 50%;
+	left: 5%;
+	width: 90%;
+	background-image: url(../images/risk/riskbar_1.png);
+	height: 20%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.riskVal{
+	font-family: Conv_HEADOH__;
+	position:absolute;
+	color:#fff;
+}
+.riskPage>.continue {
+background-image: url(../images/continue.png);
+background-repeat: no-repeat;
+width: 44%;
+height: 82%;
+background-size: 100% 100%;
+position: absolute;
+left: 28%;
+top: 131%;
 }
