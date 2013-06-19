@@ -1,10 +1,13 @@
+var playType = "";
 function showPlayPage(type){
     
     if (type == "video"){
         $(".movPlace").show();
+        playType = video;
     }
     else{
         $(".movPlace").hide();
+        playType = "noVideo";
     }
 
      $("#home").hide();
@@ -14,12 +17,12 @@ function showPlayPage(type){
 
 }
 
-function startPlay(type){
+function startPlay(){
     total = 0;
     time = 10;
 
     //if video play
-    if(type == "video"){
+    if(playType == "video"){
           video.play();
           setTimeout(function(){
               video.play();
@@ -31,7 +34,10 @@ function startPlay(type){
   
     
     //if 24/7
-
+    else{
+        initHeaderQuestionValue(1);
+        triggerNoVideoEvents();
+    }
 }
 
 function goToHome(){
@@ -40,4 +46,5 @@ function goToHome(){
     video.pause();
     video.currentTime = 0;
     $(".movPlace").hide();
+
 }
