@@ -47,7 +47,24 @@ function init() {
     //init the risk slider
     $('input[type="range"]').change(function(e, i) {
         console.log($(this).val());
-		
+
+        //set value number
+        value = $(this).val();
+        $(".questionSubHeader .value .val").text("$"+value);
+
+    });
+
+    //continue clicked
+    $(".riskPage .continue").bind("touchend",function(){
+        riskContClicked();
+    });
+
+
+
+
+    //secret div - to share page
+    $(".secretGoToShare").bind("dblclick",function() {
+        goToSharePage();
     });
 }
 
@@ -169,9 +186,9 @@ function timerEnd(){
      }
     
 }
-
+var videoInterval;
 function triggerVideoEvents(){
-    setInterval(function() {
+    videoInterval = setInterval(function() {
         var curTimeTemp = video.currentTime.toString();
         curTime = curTimeTemp.split(".")[0];
         //console.log("curTime" + curTime);
@@ -245,10 +262,10 @@ function triggerVideoEvents(){
     }, 1000);
 }
 
-
+var noVideoInterval;
 function triggerNoVideoEvents(){
     var curTimeNoVideo = 0;
-    setInterval(function() {
+  noVideoInterval =  setInterval(function() {
         curTimeNoVideo++;
          switch(curTimeNoVideo) {
             case 5:
@@ -314,29 +331,60 @@ function triggerNoVideoEvents(){
             case 76:
                  $("body").trigger("showRisk", [4]);
                 break;
-            case 76:
-                console.log("00:14" + curTimeNoVideo);
-                $("body").trigger("showAnswers", [5]);
-                break;
-            case 79:
-                console.log("00:18" + curTimeNoVideo);
-                $("body").trigger("showQuestion", [5]); break;
-            case 89:
-                console.log("01:46" + curTimeNoVideo);
-                $("body").trigger("showPrecents", [5]);
-                break;
-            case 93:
-                console.log("01:49" + curTimeNoVideo);
-                $("body").trigger("hideAnswer", [5]);
-                break;
+            //case 76:
+            //    console.log("00:14" + curTimeNoVideo);
+            //    $("body").trigger("showAnswers", [5]);
+            //    break;
+            //case 79:
+            //    console.log("00:18" + curTimeNoVideo);
+            //    $("body").trigger("showQuestion", [5]); break;
+            //case 89:
+            //    console.log("01:46" + curTimeNoVideo);
+            //    $("body").trigger("showPrecents", [5]);
+            //    break;
+            //case 93:
+            //    console.log("01:49" + curTimeNoVideo);
+            //    $("body").trigger("hideAnswer", [5]);
+            //    break;
         }
     }, 1000);
 }
 
+function noVideoQ5Event(){
+     curTimeNoVideo = 75;
+    noVideoInterval =  setInterval(function() {
+       
+        curTimeNoVideo++;
+         switch(curTimeNoVideo) {
+             case 76:
+                console.log("00:14" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [5]);
+                break;
+            case 80:
+                console.log("00:18" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [5]); break;
+            case 90:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [5]);
+                break;
+            case 94:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [5]);
+                break;
+
+             }
+       },1000 );
+}
+
 function initHeaderQuestionValue(id){
-    var valueTemp = getValue(id);
-    value = valueTemp;
-    $(".questionSubHeader .value .val").text("$"+valueTemp);
+    //if this is not the 5 ques - take the const value
+    //else - the value was set by the user
+    if(id < 5){
+         var valueTemp = getValue(id);
+         value = valueTemp;
+    }
+   
+    $(".questionSubHeader .value .val").text("$"+value);
     $(".questionSubHeader .time .val").text("00:10");
     $(".questionSubHeader .total .val").text("$"+total);
     
@@ -366,7 +414,20 @@ function rightAnsClicked(){
 function showAndInitRiskPage(){
     $(".answers").hide();
     $(".riskPage").show();
-
+    $(".coverAnswer").hide();
     $(".riskPage .riskVal").text("$"+total);
-    $("#riskSlide").attr("max", "total");
+    $("#riskSlide").attr("max", total);
+}
+
+function riskContClicked(){
+    $(".answers").show();
+    $(".riskPage").hide();
+    $(".coverAnswer").show();
+    //risk = $('input[type="range"]').val();
+    //if play type is with video -
+
+
+    //if play type is no video
+        //continue the time listener
+        noVideoQ5Event();
 }
