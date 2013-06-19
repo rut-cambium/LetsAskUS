@@ -67,11 +67,8 @@ html[xmlns] .clearfix {
 	font-weight: normal;
 	font-style: normal;
 }
+
 .btn:hover{
-    /*-webkit-transform:scale(0.99,0.99);*/
-	transform:scale(0.99,0.99); 
-}
-.firstAns.btn:hover{
 opacity:0.75;
 }
 /*  play section*/
