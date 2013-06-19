@@ -63,14 +63,16 @@ span.logoHome {
 .resev{
 	font-family: Conv_HEADTH__;	
 	color: #fff;
-	font-size: 89px;
+	font-size: 65px;
 	text-align: center;
+	font-weight: normal;
 }
 .score{
 	font-family: Conv_HEADoH__;  color: #fff;  
-	font-size: 109px;  text-align: center;	
+	font-size: 99px;  text-align: center;	
 	text-shadow: #000 11px 8px 1px;
 }
 .better{
-	font-family: Conv_HEADTH__;  color: #fff;  font-size: 89px;  text-align: center;	
+	font-family: Conv_HEADTH__;  color: #fff;  
+	font-size: 69px;  text-align: center;	
 }

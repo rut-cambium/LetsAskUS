@@ -18,7 +18,7 @@ video {
 }
 /*---------------------------------------------------home------------------------------------------------*/
 #home {
-	display: block;
+	display: none;
 }
 span.logoHome {
 	background-image: url(../images/home/main.png);
@@ -68,15 +68,15 @@ span.logoHome {
 .resev{
 	font-family: Conv_HEADTH__;	
 	color: #fff;
-	font-size: 42px;
+	font-size: 33px;
 	text-align: center;
 }
 .score{
 	font-family: Conv_HEADoH__;  color: #fff;  
-	font-size: 55px;  text-align: center;	
+	font-size: 50px;  text-align: center;	
 	text-shadow: #000 5px 4px 1px;
 }
 .better{
 	font-family: Conv_HEADTH__;  color: #fff;  
-	font-size: 39px;  text-align: center;	
+	font-size: 36px;  text-align: center;	
 }
