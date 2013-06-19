@@ -2,6 +2,8 @@ var video;
 var time = 10;
 var total = 0;
 var value;
+var answersClickedArray = new Array(6);
+var indexSnswersClicked = 0;
 $(document).ready(function() {
     init();
 });
@@ -33,18 +35,21 @@ function init() {
     $(".firstAns").addClass("btn");
     $(".result").addClass("btn");
     
-    //init the right answer event
-    $("body").delegate(".rightAns","touchend",function(){
-        rightAnsClicked(this);
-    })
+    //init the clicked answer event
+    $("body").delegate(".firstAns", "touchend", function() {
+        
+        answerClicked($(this));
+    });
 }
 
 
 function showAnswers(id){
      console.log("showAnswers " + id);
      //show skype banner
-     $(".banner").show();
+     $("#card").removeClass("flop");
      $("#Q" + id).hide();
+     $(".banner").show();
+     
 
      //init the value, time, total by Q1
      initHeaderQuestionValue(id);
@@ -60,23 +65,31 @@ function showAnswers(id){
 function showQuestion(id){
      console.log("showQuestion " + id);
      
-     //show Question
+     //show Question with flop
      $("#Q"+id).show();
+     $("#card").addClass("flop");
+     
      //start timer
      startTimer(id);
       //hide the cover answers - prevent click until question display
      $(".coverAnswer").hide();
+
+     //set the current nu, of question
+   //  indexSnswersClicked++;
 }
 
 function showPrecents(id){
      console.log("showPrecents " + id);
-     $("#waitingScreen").hide();
+     //show the waiting screen only in video play
+     if(playType =="video"){
+         $("#waitingScreen").hide();
+     }
+     
+     
      //hide answers, show answers with perctenge
      $("#ans" + id).hide();
      $("#ans" + id).show();
     
-     //show the correct answer
-
      //set total value
       $(".questionSubHeader .total .val").text("$"+total);
 }
@@ -87,6 +100,17 @@ function hideAnswer(id){
      //hide the answers
      $("#ans" + id).hide();
      $("#Q" + id).hide();
+
+     //if the current question is 5 - go to share page
+     if(id == 5){
+        $("#play").hide();
+        $("#share").show();
+
+        //set the total time in share page
+        $("#share .score").text("$" + total);
+     }
+    
+
 }
 
 function startTimer(id){
@@ -123,10 +147,11 @@ function timer(){
 }
 
 function timerEnd(){
+     //show the waiting screen only in video play
+     if(playType =="video"){
+         $("#waitingScreen").show();
+     }
     
-    //show the waiting screen
-    console.log("show waiting screen");
-    $("#waitingScreen").show();
 }
 
 function triggerVideoEvents(){
@@ -215,6 +240,92 @@ function triggerVideoEvents(){
     }, 1000);
 }
 
+
+function triggerNoVideoEvents(){
+    var curTimeNoVideo = 0;
+    setInterval(function() {
+        curTimeNoVideo++;
+         switch(curTimeNoVideo) {
+            case 5:
+                console.log("00:13" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [1]);
+                break;
+
+            case 7:
+                console.log("00:17" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [1]); break;
+            case 17:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [1]);
+                break;
+            case 21:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [1]);
+                break;
+            case 22:
+                console.log("00:14" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [2]);
+                break;
+            case 25:
+                console.log("00:18" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [2]); break;
+            case 35:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [2]);
+                break;
+            case 39:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [2]);
+                break;
+            case 40:
+                console.log("00:14" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [3]);
+                break;
+            case 43:
+                console.log("00:18" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [3]); break;
+            case 53:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [3]);
+                break;
+            case 57:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [3]);
+                break;
+            case 58:
+                console.log("00:14" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [4]);
+                break;
+            case 61:
+                console.log("00:18" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [4]); break;
+            case 71:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [4]);
+                break;
+            case 75:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [4]);
+                break;
+            case 76:
+                console.log("00:14" + curTimeNoVideo);
+                $("body").trigger("showAnswers", [5]);
+                break;
+            case 79:
+                console.log("00:18" + curTimeNoVideo);
+                $("body").trigger("showQuestion", [5]); break;
+            case 89:
+                console.log("01:46" + curTimeNoVideo);
+                $("body").trigger("showPrecents", [5]);
+                break;
+            case 93:
+                console.log("01:49" + curTimeNoVideo);
+                $("body").trigger("hideAnswer", [5]);
+                break;
+        }
+    }, 1000);
+}
+
 function initHeaderQuestionValue(id){
     var valueTemp = getValue(id);
     value = valueTemp;
@@ -228,6 +339,17 @@ function initHeaderQuestionValue(id){
 function getValue(numOfQ){
     var currentData = data["question" + numOfQ];
     return currentData.value;
+}
+
+function answerClicked(answer){
+    //answersClickedArray[indexSnswersClicked] = 1;
+    //show the cover answers - prevent click after one click
+    $(".coverAnswer").show();
+
+    //if the user click on the right answer
+    if(answer.hasClass("rightAns")){
+        rightAnsClicked();
+    }
 }
 
 function rightAnsClicked(){
