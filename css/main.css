@@ -384,6 +384,10 @@ section {
 #ans1 .pos2 .firstAns {
 	background-image: url(../images/q/Q1_A2.png);
 }
+
+#ans1 .rightAnsp{
+    background-image: url(../images/q/Q1_rightanswer.png);
+}
 /*--------------------answer2-------------------------*/
 #ans2 .pos1 .firstAns {
 	background-image: url(../images/q/Q2_A1.png);
@@ -400,8 +404,9 @@ section {
 #ans2 .pos3middle .firstAns {
 	background-image: url(../images/q/Q2_A3.png);
 }
-#ans2 .pos3middle .result {
-	background-image: url(../images/q/Q3_A2_p.png);
+
+#ans2 .rightAnsp{
+    background-image: url(../images/q/Q2_rightanswer.png);
 }
 /*--------------------answer3-------------------------*/
 #ans3 .pos1 .firstAns {
@@ -419,14 +424,15 @@ section {
 #ans3 .pos3 .firstAns {
 	background-image: url(../images/q/Q3_A3.png);
 }
-#ans3 .pos3 .result {
-	background-image: url(../images/q/Q3_A3_p.png);
-}
+
 #ans3 .pos4 .firstAns {
 	background-image: url(../images/q/Q3_A4.png);
 }
 #ans3 .pos4 .result {
 	background-image: url(../images/q/Q3_A4_p.png);
+}
+#ans3 .rightAnsp{
+    background-image: url(../images/q/Q3_rightanswer.png);
 }
 /*--------------------answer4-------------------------*/
 #ans4 .pos1 .firstAns {
@@ -438,9 +444,7 @@ section {
 #ans4 .pos2 .firstAns {
 	background-image: url(../images/q/Q4_A2.png);
 }
-#ans4 .pos2 .result {
-	background-image: url(../images/q/Q4_A2_p.png);
-}
+
 #ans4 .pos3 .firstAns {
 	background-image: url(../images/q/Q4_A3.png);
 }
@@ -452,6 +456,9 @@ section {
 }
 #ans4 .pos4 .result {
 	background-image: url(../images/q/Q4_A4_p.png);
+}
+#ans4 .rightAnsp{
+    background-image: url(../images/q/Q4_rightanswer.png);
 }
 /*--------------------answer5-------------------------*/
 #ans5 .pos1 .firstAns {
@@ -469,14 +476,15 @@ section {
 #ans5 .pos3 .firstAns {
 	background-image: url(../images/q/Q5_A3.png);
 }
-#ans5 .pos3 .result {
-	background-image: url(../images/q/Q5_A3_p.png);
-}
+
 #ans5 .pos4 .firstAns {
 	background-image: url(../images/q/Q5_A4.png);
 }
 #ans5 .pos4 .result {
 	background-image: url(../images/q/Q5_A4_p.png);
+}
+#ans5 .rightAnsp{
+    background-image: url(../images/q/Q5_rightanswer.png);
 }
 /*=======================================================waiting============================================*/
 #waitingScreen {

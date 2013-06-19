@@ -3,7 +3,7 @@ function showPlayPage(type){
     
     if (type == "video"){
         $(".movPlace").show();
-        playType = video;
+        playType = "video";
     }
     else{
         $(".movPlace").hide();

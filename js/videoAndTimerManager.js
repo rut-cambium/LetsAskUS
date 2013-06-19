@@ -60,10 +60,14 @@ function showAnswers(id){
 
      //show the cover answers - prevent click until question display
      $(".coverAnswer").show();
-
+    
+     //
      //show answers
       $("#ans" + id).show();
-      $("#ans" + id).show();
+        //display the animate
+      $("#ans" + id + " .answerFilp").show();
+      $("#ans" + id + " .answerFilp").removeClass("openP");
+      $("#ans" + id + " .answerFilp").addClass("openA");
 }
 
 function showQuestion(id){
@@ -91,9 +95,12 @@ function showPrecents(id){
      
      
      //hide answers, show answers with perctenge
-     $("#ans" + id).hide();
-     $("#ans" + id).show();
-    
+    // $("#ans" + id).hide();
+    // $("#ans" + id).show();
+      //display the animate 
+      $("#ans" + id + " .answerFilp").removeClass("openA");
+      $("#ans" + id + " .answerFilp").addClass("openP");
+
      //set total value
       $(".questionSubHeader .total .val").text("$"+total);
 }
