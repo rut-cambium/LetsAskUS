@@ -77,12 +77,22 @@ span.logoHome {
 	font-size: 69px;  text-align: center;	
 }
 /*========================================risk=====================================================*/
+.rnageSelect{
+	position: absolute;
+	top: 39%;
+	left: 12.5%;
+	background-color: #401326;
+	background-repeat: no-repeat;
+	height: 22.5%;
+	border-radius: 58px 0 0 58px;
+	width: 2%;
+}
 input[type="range"] {
 	width: 71.5%;
 	position: absolute;
 	top: 39%;
 	left: 12.5%;
-	background-image: url(../img/rate/rang_slid.png);
+	background-color:#e0d0bc;
 	background-repeat: no-repeat;
 	height: 22.5%;
 	border-radius: 58px;
