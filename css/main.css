@@ -291,6 +291,16 @@ section {
 	-webkit-transition: all 1s ease-in-out;
 	transform-style: preserve-3d;
 	transition: all 1s ease-in-out;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+.answerFilp.pos1.openA,.answerFilp.pos2.openA,.answerFilp.pos3middle.openA,.answerFilp.pos3.openA,.answerFilp.pos4.openA{
+	-webkit-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+}
+.answerFilp.pos1.openP,.answerFilp.pos2.openP,.answerFilp.pos3middle.openP,.answerFilp.pos3.openP,.answerFilp.pos4.openP{
+	-webkit-transform: rotateX(90deg);
+	transform: rotateX(90deg);
 }
 .answerFilp.pos2 {
 	width: 44%;
@@ -352,6 +362,19 @@ section {
 	height: 100%;
 	background-size: 100% 100%;
 }
+.firstAns {
+	-webkit-transform: rotateX(90deg);
+	-webkit-backface-visibility: hidden;
+	transform: rotateX(90deg);
+	backface-visibility: hidden;
+}
+.result {
+	-webkit-transform: rotateX(-96deg);
+	-webkit-backface-visibility: hidden;
+	transform: rotateX(-96deg);
+	backface-visibility: hidden;
+}
+
 #ans1 .pos1 .firstAns {
 	background-image: url(../images/q/Q1_A1.png);
 }
