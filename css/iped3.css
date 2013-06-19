@@ -77,22 +77,14 @@ span.logoHome {
 	font-size: 69px;  text-align: center;	
 }
 /*========================================risk=====================================================*/
-.rnageSelect{
-	position: absolute;
-	top: 39%;
-	left: 12.5%;
-	background-color: #401326;
-	background-repeat: no-repeat;
-	height: 22.5%;
-	border-radius: 58px 0 0 58px;
-	width: 2%;
-}
+
 input[type="range"] {
 	width: 71.5%;
 	position: absolute;
 	top: 39%;
 	left: 12.5%;
-	background-color:#e0d0bc;
+		background-image:url(../images/risk/riskPpint.png);
+	background-position:0px 0px;
 	background-repeat: no-repeat;
 	height: 22.5%;
 	border-radius: 58px;
@@ -106,6 +98,7 @@ input[type='range']::-webkit-slider-thumb {
  background-repeat:no-repeat;
   background-size:100% 100%;
 }
+
 .riskVal {
 	font-family: Conv_HEADOH__;
 	position: absolute;

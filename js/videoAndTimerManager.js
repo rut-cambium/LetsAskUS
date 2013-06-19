@@ -47,6 +47,7 @@ function init() {
     //init the risk slider
     $('input[type="range"]').change(function(e, i) {
         console.log($(this).val());
+		
     });
 }
 
