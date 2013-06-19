@@ -48,9 +48,8 @@ function init() {
     $('input[type="range"]').change(function(e, i) {
         console.log($(this).val());
 
-        //set value number
-        value = $(this).val();
-        $(".questionSubHeader .value .val").text("$"+value);
+        inputChange($(this));
+       
 
     });
 
@@ -430,4 +429,26 @@ function riskContClicked(){
     //if play type is no video
         //continue the time listener
         noVideoQ5Event();
+}
+
+function inputChange(pointer){
+     //set value number
+        value = pointer.val();
+        $(".questionSubHeader .value .val").text("$" + value);
+
+        //set the slider background
+
+        var val = pointer.val();
+        var maxVal = pointer.attr("max");
+        var precent = val / maxVal;
+
+        //the background position move from 99.45 - 1.45
+        //so 32 is the 100%
+        var precentByBackground = 98 * precent;
+        //decrease the pixels from the left pos - 99%
+        var xPos = 99.45 - precentByBackground;
+        //set the background position 
+        pointer.css("background-position-x",xPos+"%");
+
+
 }
