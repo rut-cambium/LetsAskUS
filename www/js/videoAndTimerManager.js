@@ -171,6 +171,7 @@ function showQuestion(id){
      console.log("showQuestion " + id);
      
      //show Question with flop
+    $(".filper").show();
      $(".question").hide();
      $("#Q"+id).show();
      $("#card").addClass("flop");
