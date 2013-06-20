@@ -36,8 +36,11 @@ function init() {
     });
 
     //init the click ctns animation
-    $(".firstAns").addClass("btn");
-    $(".result").addClass("btn");
+   // $(".firstAns").addClass("btn");
+    //$(".result").addClass("btn");
+	$('.answers').on('touchend','.firstAns',function(){
+		$(this).addClass('active disabel');
+	});
     
     //init the clicked answer event
     $("body").delegate(".firstAns", "touchend", function() {
