@@ -39,7 +39,7 @@ function init() {
    // $(".firstAns").addClass("btn");
     //$(".result").addClass("btn");
 	$('.answers').on('touchend','.firstAns',function(){
-		$(this).addClass('active');
+		$(this).addClass('active disabel');
 	});
     
     //init the clicked answer event
