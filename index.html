@@ -16,9 +16,10 @@
 </head>
 <body>
 <div class="movPlace">
-	<video id="video" preload="auto" controls="controls">
-	  <source src="media/full.mp4" type="video/mp4">
-	Your browser does not support the video tag.
+	<video id="video" preload="auto" controls>
+	  <source type="video/ogg; codecs=theora,vorbis" src="media/full.ogv">
+            <source src="media/full.wmv">
+	        <source src="media/full.mp4" type="video/mp4">
 	</video>
 </div>
 <section id="home">
@@ -172,7 +173,7 @@
  	<img src="images/play/home_btn.png" class="home_btn" ontouchend="goToHome()">
 
 	<span class="logoPlay"></span>
-	<div class="camera"></div>
+	<!--<div class="camera"></div>-->
 	<div class="contect">
 		<p class="resev">ON TONIGHT’S SHOW YOU SCORED:</p>
 		<p class="score"></p>
