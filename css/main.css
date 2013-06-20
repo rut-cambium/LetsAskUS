@@ -306,6 +306,12 @@ section {
 	-webkit-transform: rotateX(90deg);
 	transform: rotateX(90deg);
 }
+.poenA .result{
+	display:none;
+}
+.openP .result{
+	display:block;
+}
 .answerFilp.pos2 {
 	width: 44%;
 	height: 44%;
@@ -632,4 +638,7 @@ input[type="range"] {
     left:0px;
     width: 100px;
     height: 100px;
+}
+.active{
+	opacity:0.65;
 }

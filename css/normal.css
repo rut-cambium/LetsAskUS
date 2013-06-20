@@ -101,6 +101,8 @@ input[type='range']::-webkit-slider-thumb {
     height: 75px;
  background-repeat:no-repeat;
  background-size:100% 100%;
+ background-color:transparent;
+ border:none;
 }
 .riskVal {
 font-family: Conv_HEADOH__;
