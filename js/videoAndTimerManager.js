@@ -36,11 +36,8 @@ function init() {
     });
 
     //init the click ctns animation
-   // $(".firstAns").addClass("btn");
-    //$(".result").addClass("btn");
-	$('.answers').on('touchend','.firstAns',function(){
-		$(this).addClass('active');
-	});
+    $(".firstAns").addClass("btn");
+    $(".result").addClass("btn");
     
     //init the clicked answer event
     $("body").delegate(".firstAns", "touchend", function() {
@@ -68,37 +65,80 @@ function init() {
     $(".secretGoToShare").bind("dblclick",function() {
         goToSharePage();
     });
+
+    //video double click jump to another point
+    $("video").bind("dblclick",function(){
+        jump();
+    });
+}
+
+
+function jump(){
+   var curTimeTemp = video.currentTime.toString();
+    currentTime = parseInt(curTimeTemp.split(".")[0]);
+    if(currentTime < 28){
+        currentTime =28;
+
+        showAnswerByJump(1);
+        showQuestionByJump(1);
+         $("#waitingScreen").show();
+    }
+    else if(currentTime < 96){
+        currentTime =96;
+        showAnswerByJump(1);
+        showQuestionByJump(1);
+    }
+    else if(currentTime < 123){
+        currentTime =123;
+         showAnswerByJump(2);
+        //showQuestionByJump(2);
+    }
+    else if(currentTime < 177){
+        currentTime =177;
+        $("#waitingScreen").show();
+        showAnswerByJump(2);
+        showQuestionByJump(2);
+    }
+    else if(currentTime < 223){
+        currentTime =223;
+        showAnswerByJump(3);
+
+       // showQuestionByJump(3);
+    }
+    else if(currentTime < 293){
+        $("#waitingScreen").show();
+        currentTime =293;
+         showAnswerByJump(3);
+        showQuestionByJump(3);
+    }
+    else if(currentTime < 328){
+        currentTime =328;
+         showAnswerByJump(4);
+       // showQuestionByJump(4);
+    }
+    else if(currentTime < 393){
+
+        currentTime =393;
+        $("#waitingScreen").show();
+         showAnswerByJump(4);
+        showQuestionByJump(4);
+    }
+    else if(currentTime < 506){
+        currentTime =506;
+         showAnswerByJump(5);
+       // showQuestionByJump(5);
+    }
+    else if(currentTime < 578){
+        currentTime =578;
+         showAnswerByJump(5);
+        showQuestionByJump(5);
+    }
+    video.currentTime = currentTime;
 }
 
 
 function showAnswers(id){
      console.log("showAnswers " + id);
-     //show skype banner
-     $("#card").removeClass("flop");
-     $("#Q" + id).hide();
-     $(".banner").show();
-     
-
-     //init the value, time, total by Q1
-     initHeaderQuestionValue(id);
-
-     //show the cover answers - prevent click until question display
-     $(".coverAnswer").show();
-    
-     
-     //show answers
-     $(".answer").hide();
-     $("#ans" + id).show();
-        //display the animate
-      $("#ans" + id + " .answerFilp").show();
-      $("#ans" + id + " .answerFilp").removeClass("openP");
-      $("#ans" + id + " .answerFilp").addClass("openA");
-
-      //remove waiting screen
-      $("#waitingScreen").hide();
-}
-
-function showAnswerByDrag(id){
      //show skype banner
      $("#card").removeClass("flop");
      $("#Q" + id).hide();
@@ -140,21 +180,27 @@ function showQuestion(id){
      //remove waiting screen
       $("#waitingScreen").hide();
 
+     
 
-  
 }
 
-function showQuestionByDrag(id){
-     //show Question with flop
+function showQuestionByJump(id){
+    //show Question with flop
      $(".question").hide();
      $("#Q"+id).show();
      $("#card").addClass("flop");
-       //hide the cover answers - prevent click until question display
-     $(".coverAnswer").hide();
-      //remove waiting screen
-      $("#waitingScreen").hide();
 }
 
+function showAnswerByJump(id){
+    $(".question").hide();
+     //show answers
+     $(".answer").hide();
+     $("#ans" + id).show();
+        //display the animate
+      $("#ans" + id + " .answerFilp").show();
+      $("#ans" + id + " .answerFilp").removeClass("openP");
+      $("#ans" + id + " .answerFilp").addClass("openA");
+}
 function showPrecents(id){
      console.log("showPrecents " + id);
      //show the waiting screen only in video play
@@ -169,13 +215,10 @@ function showPrecents(id){
      //set total value
       $(".questionSubHeader .total .val").text("$"+total);
 
-      
-
 }
 
-function showPrecentsByDrag(id){
-    $("#waitingScreen").hide();
-
+function showPrecentsByJump(id){
+    //hide answers, show answers with perctenge
       $("#ans" + id + " .answerFilp").removeClass("openA");
       $("#ans" + id + " .answerFilp").addClass("openP");
 
@@ -194,13 +237,10 @@ function hideAnswer(id){
      if(id == 5){
         $("#play").hide();
         $("#share").show();
-
-        //set the total time in share pageon
-		
-        $("#share .score").text("$" + total);
-       
-        //remove waiting screen
         $("#waitingScreen").hide();
+
+        //set the total time in share page
+        $("#share .score").text("$" + total);
      }
     
 
@@ -222,7 +262,6 @@ function startTimer(id){
 
     }, 1000);
 }
-
 
 
 function timer(){
@@ -252,132 +291,71 @@ function triggerVideoEvents(){
     videoInterval = setInterval(function() {
         var curTimeTemp = video.currentTime.toString();
         curTime = curTimeTemp.split(".")[0];
-        curTime = parseInt(curTime);
         //console.log("curTime" + curTime);
         switch(curTime) {
-            case 13:
+            case "13":
                 console.log("00:13" + curTime);
-                $("body").trigger("showAnswers", [1]);
+                $("body").trigger("showAnswers",[1]);
                 break;
-            case curTime > 13 && curTime < 17:
-                showAnswersByDrag(1);
-                break;
-            case 17:
+            case "17":
                 console.log("00:17" + curTime);
-                $("body").trigger("showQuestion", [1]); break;
-            case curTime > 17 && curTime < 106:
-                showQuestionByDrag(1);
+                $("body").trigger("showQuestion",[1]); break;
+            case "106":
+                console.log("01:46" + curTime); 
+                $("body").trigger("showPrecents",[1]);
                 break;
-            case 106:
-                console.log("01:46" + curTime);
-                $("body").trigger("showPrecents", [1]);
+            case "109":
+                console.log("01:49" + curTime); 
+                $("body").trigger("hideAnswer",[1]);
                 break;
-            case curTime > 106 && curTime < 109:
-                showPrecentsByDrag(1);
-                break;
-            case 109:
-                console.log("01:49" + curTime);
-                $("body").trigger("hideAnswer", [1]);
-                break;
-            case curTime > 109 && curTime < 126:
-                hideAnswerByDrag(1);
-                break;
-            case 126:
+            case "126":
                 console.log("00:14" + curTime);
-                $("body").trigger("showAnswers", [2]);
+                $("body").trigger("showAnswers",[2]);
                 break;
-            case curTime > 126 && curTime < 133:
-                showAnswersByDrag(2);
+            case "133":
+                $("body").trigger("showQuestion",[2]); break;
+            case "187":
+                $("body").trigger("showPrecents",[2]);
                 break;
-            case 133:
-                $("body").trigger("showQuestion", [2]); break;
-            case curTime > 133 && curTime < 187:
-                showQuestionByDrag(2);
+           case "192":
+                $("body").trigger("hideAnswer",[2]);
                 break;
-            case 187:
-                $("body").trigger("showPrecents", [2]);
+           case "225":
+                $("body").trigger("showAnswers",[3]);
                 break;
-            case curTime > 187 && curTime < 192:
-                showPrecentsByDrag(2);
+            case "233":
+                $("body").trigger("showQuestion",[3]); break;
+            case "303":
+                $("body").trigger("showPrecents",[3]);
                 break;
-            case 192:
-                $("body").trigger("hideAnswer", [2]);
+           case "308": 
+                $("body").trigger("hideAnswer",[3]);
                 break;
-            case curTime > 192 && curTime < 225:
-                hideAnswerByDrag(2);
+           case "324":
+                $("body").trigger("showAnswers",[4]);
                 break;
-            case 225:
-                $("body").trigger("showAnswers", [3]);
+            case "338":
+                $("body").trigger("showQuestion",[4]); break;
+            case "403":
+                console.log("01:46" + curTime); 
+                $("body").trigger("showPrecents",[4]);
                 break;
-            case curTime > 225 && curTime < 233:
-                showAnswersByDrag(3);
+           case "408":
+                $("body").trigger("hideAnswer",[4]);
                 break;
-            case 233:
-                $("body").trigger("showQuestion", [3]); break;
-            case curTime > 233 && curTime < 303:
-                showQuestionByDrag(3);
+           case "460": 
+                $("body").trigger("showRisk",[4]);
                 break;
-            case 303:
-                $("body").trigger("showPrecents", [3]);
+           case "510":
+                $("body").trigger("showAnswers",[5]);
                 break;
-           case curTime >303 && curTime < 308:
-                showPrecentsByDrag(3);
+            case "516":
+                $("body").trigger("showQuestion",[5]); break;
+            case "588": 
+                $("body").trigger("showPrecents",[5]);
                 break;
-            case 308:
-                $("body").trigger("hideAnswer", [3]);
-                break;
-            case curTime >308 && curTime < 324:
-                hideAnswerByDrag(3);
-                break;
-            case 324:
-                $("body").trigger("showAnswers", [4]);
-                break;
-            case curTime >324 && curTime < 338:
-                showAnswersByDrag(4);
-                break;
-            case 338:
-                $("body").trigger("showQuestion", [4]); break;
-            case curTime >403 && curTime < 408:
-                showQuestionByDrag(4);
-                break;
-            case 403:
-                console.log("01:46" + curTime);
-                $("body").trigger("showPrecents", [4]);
-                break;
-            case curTime >403 && curTime < 408:
-                showPrecentsByDrag(4);
-                break;
-            case 408:
-                $("body").trigger("hideAnswer", [4]);
-                break;
-            case curTime >408 && curTime < 460:
-                hideAnswerByDrag(4);
-                break;
-            case 460:
-                $("body").trigger("showRisk", [4]);
-                break;
-            case curTime >460 && curTime < 510:
-                showRiskByDrag(4);
-                break;
-            case 510:
-                $("body").trigger("showAnswers", [5]);
-                break;
-            case curTime >510 && curTime < 516:
-                showAnswersByDrag(5);
-                break;
-            case 516:
-                $("body").trigger("showQuestion", [5]); break;
-            case curTime >516 && curTime < 588:
-                showQuestionByDrag(5);
-                break;
-            case 588:
-                $("body").trigger("showPrecents", [5]);
-                break;
-            case curTime >588 && curTime < 593:
-                showPrecentsByDrag(5);
-                break;
-            case 593:
-                $("body").trigger("hideAnswer", [5]);
+           case "593":
+                $("body").trigger("hideAnswer",[5]);
                 break;
         }
     }, 1000);
@@ -534,6 +512,7 @@ function rightAnsClicked(){
 
 function showAndInitRiskPage(){
     $(".answers").hide();
+    $(".filper").hide();
     $(".riskPage").show();
     $(".coverAnswer").hide();
     $(".riskPage .riskVal").text("$"+total);

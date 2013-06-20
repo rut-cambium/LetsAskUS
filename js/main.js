@@ -50,6 +50,7 @@ function goToHome(){
     video.pause();
     video.currentTime = 0;
     $(".movPlace").hide();
+     $(".answer").hide();
 	$('.firstAns').removeClass('active');
 
     //init intervals;
