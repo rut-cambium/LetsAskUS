@@ -533,11 +533,15 @@ function riskContClicked(){
     $(".coverAnswer").show();
     //risk = $('input[type="range"]').val();
     //if play type is with video -
-
-
-    //if play type is no video
+    if(playType =="video"){
+        $("#waitingScreen").show();
+    }
+    else{
+        //if play type is no video
         //continue the time listener
         noVideoQ5Event();
+    }
+   
 }
 
 function inputChange(pointer){

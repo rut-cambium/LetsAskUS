@@ -67,7 +67,7 @@ function goToHome(){
     $(".active").removeClass("active");
     //$(".answerFilp").removeClass("answerFilp");
      $(".result").hide();
-    $(".disabel").removeClass("disabel");
+    //$(".disabel").removeClass("disabel");
     //init intervals;
      window.clearInterval(videoInterval);
      window.clearInterval(noVideoInterval);
