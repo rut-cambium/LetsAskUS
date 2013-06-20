@@ -244,6 +244,10 @@ function hideAnswer(id){
 
         //set the total time in share page
         $("#share .score").text("$" + total);
+
+        //hide the video
+        video.pause();
+        $(".movPlace").hide();
      }
     
 
