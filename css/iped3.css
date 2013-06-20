@@ -1,9 +1,9 @@
 .movPlace {
 	position: absolute;
-	width: 530px;
-	height: 295px;
-	top: 90px;
-	left: 90px;
+	width: 830px;
+	height: 435px;
+	top: 7%;
+	left: 31%;
 	border-radius: 10px;
 	border: solid 12px #1f59a2;
 	display: none;
@@ -11,8 +11,8 @@
 	z-index: 500;
 }
 video {
-	width: 530px;
-	height: 370px;
+	width: 830px;
+	height: 470px;
 	position: absolute;
 	top: -35px;
 }

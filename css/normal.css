@@ -1,9 +1,9 @@
 .movPlace {
 	position: absolute;
-	width: 270px;
-	height: 153px;
-	top: 30px;
-	left: 30px;
+	width: 420px;
+	height: 238px;
+	top: 50px;
+	left: 310px;
 	border-radius: 10px;
 	border: solid 6px #1f59a2;
 	display: none;
@@ -11,10 +11,10 @@
 	z-index: 500;
 }
 video {
-	width: 270px;
-	height: 225px;
+	width: 424px;
+	height: 240px;
 	position: absolute;
-	top: -35px;
+	top: 0px;
 }
 /*---------------------------------------------------home------------------------------------------------*/
 #home {
@@ -27,7 +27,7 @@ span.logoHome {
 	height: 439px;
 	position: absolute;
 	display: block;
-	top: 80px;
+	top: 15%;
 	left: 183px;
 	background-size: 100% 100%;
 }
