@@ -36,8 +36,11 @@ function init() {
     });
 
     //init the click ctns animation
-    $(".firstAns").addClass("btn");
-    $(".result").addClass("btn");
+   // $(".firstAns").addClass("btn");
+    //$(".result").addClass("btn");
+	$('.answers').on('touchend','.firstAns',function(){
+		$(this).addClass('active');
+	});
     
     //init the clicked answer event
     $("body").delegate(".firstAns", "touchend", function() {
@@ -192,7 +195,8 @@ function hideAnswer(id){
         $("#play").hide();
         $("#share").show();
 
-        //set the total time in share page
+        //set the total time in share pageon
+		
         $("#share .score").text("$" + total);
        
         //remove waiting screen
