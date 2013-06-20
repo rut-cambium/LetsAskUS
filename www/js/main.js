@@ -1,9 +1,22 @@
 var playType = "";
 function showPlayPage(type){
     
+    //init intervals;
+    window.clearInterval(videoInterval);
+    window.clearInterval(noVideoInterval);
+    window.clearInterval(timeInterval);
+
+    videoInterval ="";
+    noVideoInterval ="";
+    timeInterval="";
+    
+    $(".question").hide();
+    $(".answer").hide();
+    
     if (type == "video"){
         $(".movPlace").show();
         playType = "video";
+        
     }
     else{
         $(".movPlace").hide();
@@ -51,10 +64,14 @@ function goToHome(){
     video.currentTime = 0;
     $(".movPlace").hide();
 	$('.firstAns').removeClass('active disabel');
-
+    $(".active").removeClass("active");
+    //$(".answerFilp").removeClass("answerFilp");
+     $(".result").hide();
+    $(".disabel").removeClass("disabel");
     //init intervals;
      window.clearInterval(videoInterval);
      window.clearInterval(noVideoInterval);
+    window.clearInterval(timeInterval);
 
 }
 

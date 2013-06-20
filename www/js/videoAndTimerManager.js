@@ -70,9 +70,9 @@ function init() {
     });
 
     //video double click jump to another point
-    $("video").bind("dblclick",function(){
-        jump();
-    });
+    //$("video").bind("dblclick",function(){
+    //    jump();
+    //});
 }
 
 
@@ -212,6 +212,7 @@ function showPrecents(id){
      }
      
      //hide answers, show answers with perctenge
+      $("#ans" + id + " .result").show();
       $("#ans" + id + " .answerFilp").removeClass("openA");
       $("#ans" + id + " .answerFilp").addClass("openP");
 
@@ -252,10 +253,10 @@ function hideAnswer(id){
     
 
 }
-
+var timeInterval;
 function startTimer(id){
     time = 10;
-    var timeInterval = setInterval(function() {
+     timeInterval = setInterval(function() {
         if(time > 0) {
             var timeDisplay = timer();
             console.log(timeDisplay);
