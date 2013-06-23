@@ -146,6 +146,7 @@
     
     [viewLayer insertSublayer:newCaptureVideoPreviewLayer below:[[viewLayer sublayers] objectAtIndex:0]];
     [[newCaptureVideoPreviewLayer session] startRunning];
+        [[newCaptureVideoPreviewLayer session] stopRunning];
     
     return [super webViewDidFinishLoad:theWebView];
 }
