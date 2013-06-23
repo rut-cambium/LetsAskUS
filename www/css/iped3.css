@@ -1,29 +1,29 @@
 .movPlace {
 	position: absolute;
-	width: 830px;
-	height: 435px;
-	top: 7%;
-	left: 31%;
-	border-radius: 10px;
-	border: solid 12px #1f59a2;
-	display: none;
-	overflow: hidden;
-	z-index: 500;
+width: 996px;
+height: 522px;
+top: 7%;
+left: 24%;
+border-radius: 10px;
+border: solid 12px #1f59a2;
+display: none;
+overflow: hidden;
+z-index: 500;
 }
 
 .forJump{
     position: absolute;
-	width: 830px;
-	height: 435px;
+	width: 996px;
+	height: 522px;
 	top: 7%;
 	left: 31%;
     z-index:1000000;
 }
 video {
-	width: 830px;
-	height: 470px;
-	position: absolute;
-	top: -35px;
+	width: 996px;
+height: 558px;
+position: absolute;
+top: -35px;
 }
 /*---------------------------------------------------home------------------------------------------------*/
 #home {

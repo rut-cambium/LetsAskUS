@@ -172,14 +172,14 @@ section {
 }
 .logoPlay {
 	display: block;
-	background-image: url(../images/play/logo.png);
-	position: absolute;
-	width: 26%;
-	height: 29%;
-	background-size: 100% 100%;
-	top: 4%;
-	left: 5%;
-	background-repeat: no-repeat;
+background-image: url(../images/play/logo.png);
+position: absolute;
+width: 20%;
+height: 22%;
+background-size: 100% 100%;
+top: 4%;
+left: 2%;
+background-repeat: no-repeat;
 }
 .filper {
 	width: 93%;
@@ -567,7 +567,7 @@ section {
 	font-size: 37px;
 	border-radius: 4px;
 	margin: auto;
-	margin-top: 30%;
+	margin-top: 34%;
 	font-family: Conv_HEADOH__;
 	z-index: 100;
 	position: relative;
