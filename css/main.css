@@ -69,7 +69,8 @@ html[xmlns] .clearfix {
 }
 
 .btn:hover{
-opacity:0.75;
+	opacity: 0.75;
+	border-top-right-radius: 0px;
 }
 /*  play section*/
 #play {
@@ -88,6 +89,7 @@ opacity:0.75;
 	height: 15%;
 	width: 100%;
 	margin: 9.23% 0% 0 7%;
+	position: absolute;
 }
 .questionSubHeader .val {
 	font-family: 'Conv_HEADOH__';
@@ -115,7 +117,6 @@ opacity:0.75;
 .questionWrap {
 	top: 35%;
 	width: 80%;
-	margin: auto;
 	position: absolute;
 	left: 10%;
 	height: 56%;
@@ -181,11 +182,12 @@ section {
 .filper {
 	width: 93%;
 	height: 21%;
-	margin: 0;
-	position: relative;
+	top: 30%;
+	position: absolute;
 	-webkit-perspective: 1000;
 	perspective: 1000;
 	margin-left: 3%;
+	-webkit-perspective: 1000;
 }
 #card {
 	width: 100%;
@@ -306,7 +308,7 @@ section {
 	-webkit-transform: rotateX(90deg);
 	transform: rotateX(90deg);
 }
-.poenA .result{
+.result{
 	display:none;
 }
 .openP .result{
@@ -371,6 +373,7 @@ section {
 	width: 100%;
 	height: 100%;
 	background-size: 100% 100%;
+	
 }
 .firstAns {
 	-webkit-transform: rotateX(90deg);
