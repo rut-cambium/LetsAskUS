@@ -69,11 +69,10 @@ html[xmlns] .clearfix {
 	font-weight: normal;
 	font-style: normal;
 }
-.btn:hover {
-<<<<<<< HEAD:css/main.css  opacity: 0.75;
-	border-top-right-radius: 0px;
-======= opacity:0.75 !important;
->>>>>>> 4a693726fb112d04208f711ace7b3989a34c31fe:www/css/main.css
+
+.btn:hover{
+
+opacity:0.75 !important;
 }
 /*  play section*/
 #play {
@@ -486,9 +485,7 @@ section {
 	background-image: url(../images/q/Q4_A2.png);
 }
 #ans4 .pos2 .firstAns.disabel {
-<<<<<<< HEAD:css/main.css  background-image: url(../images/q/disable.png), url(../images/q/Q4_A2.png);
-=======  background-image: url(../images/q/disable.png), url(../images/q/Q4_A2.png);
->>>>>>> 4a693726fb112d04208f711ace7b3989a34c31fe:www/css/main.css
+    background-image: url(../images/q/disable.png),url(../images/q/Q4_A2.png);
 }
 #ans4 .pos3 .firstAns {
 	background-image: url(../images/q/Q4_A3.png);
