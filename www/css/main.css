@@ -71,7 +71,7 @@ html[xmlns] .clearfix {
 }
 
 .btn:hover{
-opacity:0.75;
+opacity:0.75 !important;
 }
 /*  play section*/
 #play {
@@ -626,6 +626,9 @@ left: 15%;
 	position: absolute;
 	left: 28%;
 	top: 51%;
+}
+.shareScore{
+    background-image: url(../images/share.png);
 }
 .exit {
 	background-image: url(../images/exit.png);

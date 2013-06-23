@@ -74,7 +74,7 @@ function init() {
 
         
         //change the btn to share
-        
+        $(this).addClass("shareScore");
 
         // freeze the camera
 

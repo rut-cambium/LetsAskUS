@@ -68,6 +68,7 @@ function goToHome(){
     //$(".answerFilp").removeClass("answerFilp");
      $(".result").hide();
     $(".btn").css("opacity",1);
+    $("#share .continue").removeClass("shareScore");
     //$(".disabel").removeClass("disabel");
     //init intervals;
      window.clearInterval(videoInterval);
