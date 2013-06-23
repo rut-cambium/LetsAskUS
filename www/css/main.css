@@ -13,8 +13,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-user-select: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -69,13 +69,10 @@ html[xmlns] .clearfix {
 	font-weight: normal;
 	font-style: normal;
 }
-
-.btn:hover{
-<<<<<<< HEAD:css/main.css
-	opacity: 0.75;
+.btn:hover {
+<<<<<<< HEAD:css/main.css  opacity: 0.75;
 	border-top-right-radius: 0px;
-=======
-opacity:0.75 !important;
+======= opacity:0.75 !important;
 >>>>>>> 4a693726fb112d04208f711ace7b3989a34c31fe:www/css/main.css
 }
 /*  play section*/
@@ -83,7 +80,6 @@ opacity:0.75 !important;
 	background-image: url('../images/bgAll.jpg');
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	
 }
 /*   questions section  */
 #question {
@@ -94,8 +90,9 @@ opacity:0.75 !important;
 	color: white;
 	height: 15%;
 	width: 100%;
-	margin: 9.23% 0% 0 7%;
+	top: 16%;
 	position: absolute;
+	left: 10%;
 }
 .questionSubHeader .val {
 	font-family: 'Conv_HEADOH__';
@@ -142,7 +139,7 @@ html, body {
 	position: relative;
 }
 body {
-	/*background-image: url(../images/bg.jpg);
+/*background-image: url(../images/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: 100%;*/
 }
@@ -155,9 +152,9 @@ section {
 	display: none;
 }
 #home {
-    background-image: url(../images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 .hide {
 	display: hide;
@@ -172,7 +169,7 @@ section {
 	height: 7%;
 	right: 3%;
 	top: 1%;
-    z-index: 9;
+	z-index: 9;
 }
 .logoPlay {
 	display: block;
@@ -306,26 +303,26 @@ section {
 	-webkit-transform: rotateX(0deg);
 	transform: rotateX(0deg);
 }
-.answerFilp.pos1.openA,.answerFilp.pos2.openA,.answerFilp.pos3middle.openA,.answerFilp.pos3.openA,.answerFilp.pos4.openA{
+.answerFilp.pos1.openA, .answerFilp.pos2.openA, .answerFilp.pos3middle.openA, .answerFilp.pos3.openA, .answerFilp.pos4.openA {
 	-webkit-transform: rotateX(-90deg);
 	transform: rotateX(-90deg);
 }
-.answerFilp.pos1.openP,.answerFilp.pos2.openP,.answerFilp.pos3middle.openP,.answerFilp.pos3.openP,.answerFilp.pos4.openP{
+.answerFilp.pos1.openP, .answerFilp.pos2.openP, .answerFilp.pos3middle.openP, .answerFilp.pos3.openP, .answerFilp.pos4.openP {
 	-webkit-transform: rotateX(90deg);
 	transform: rotateX(90deg);
 }
-.result{
-	display:none;
+.result {
+	display: none;
 }
-.openP .result{
-	display:block;
+.openP .result {
+	display: block;
 }
 .answerFilp.pos2 {
 	width: 44%;
 	height: 44%;
 	position: absolute;
 	left: 50%;
- -webkit-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
 	-webkit-transition: all 1s ease-in-out;
 	transform-style: preserve-3d;
 	transition: all 1s ease-in-out;
@@ -370,7 +367,7 @@ section {
 	width: 100%;
 	height: 100%;
 	background-size: 100% 100%;
-    z-index: 100;
+	z-index: 100;
 }
 .result {
 	position: absolute;
@@ -379,7 +376,6 @@ section {
 	width: 100%;
 	height: 100%;
 	background-size: 100% 100%;
-	
 }
 .firstAns {
 	-webkit-transform: rotateX(90deg);
@@ -393,12 +389,11 @@ section {
 	transform: rotateX(-96deg);
 	backface-visibility: hidden;
 }
-
 #ans1 .pos1 .firstAns {
 	background-image: url(../images/q/Q1_A1.png);
 }
 #ans1 .pos1 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q1_A1.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q1_A1.png);
 }
 #ans1 .pos1 .result {
 	background-image: url(../images/q/Q1_A1_p.png);
@@ -407,17 +402,17 @@ section {
 	background-image: url(../images/q/Q1_A2.png);
 }
 #ans1 .pos2 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q1_A2.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q1_A2.png);
 }
-#ans1 .rightAnsp{
-    background-image: url(../images/q/Q1_rightanswer.png);
+#ans1 .rightAnsp {
+	background-image: url(../images/q/Q1_rightanswer.png);
 }
 /*--------------------answer2-------------------------*/
 #ans2 .pos1 .firstAns {
 	background-image: url(../images/q/Q2_A1.png);
 }
 #ans2 .pos1 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q2_A1.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q2_A1.png);
 }
 #ans2 .pos1 .result {
 	background-image: url(../images/q/Q2_A1_p.png);
@@ -426,7 +421,7 @@ section {
 	background-image: url(../images/q/Q2_A2.png);
 }
 #ans2 .pos2 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q2_A2.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q2_A2.png);
 }
 #ans2 .pos2 .result {
 	background-image: url(../images/q/Q2_A2_p.png);
@@ -435,17 +430,17 @@ section {
 	background-image: url(../images/q/Q2_A3.png);
 }
 #ans2 .pos3middle .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q2_A3.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q2_A3.png);
 }
-#ans2 .rightAnsp{
-    background-image:url(../images/q/Q2_rightanswer.png);
+#ans2 .rightAnsp {
+	background-image: url(../images/q/Q2_rightanswer.png);
 }
 /*--------------------answer3-------------------------*/
 #ans3 .pos1 .firstAns {
 	background-image: url(../images/q/Q3_A1.png);
 }
 #ans3 .pos1 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q3_A1.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q3_A1.png);
 }
 #ans3 .pos1 .result {
 	background-image: url(../images/q/Q3_A1_p.png);
@@ -454,7 +449,7 @@ section {
 	background-image: url(../images/q/Q3_A2.png);
 }
 #ans3 .pos2 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q3_A2.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q3_A2.png);
 }
 #ans3 .pos2 .result {
 	background-image: url(../images/q/Q3_A2_p.png);
@@ -463,26 +458,26 @@ section {
 	background-image: url(../images/q/Q3_A3.png);
 }
 #ans3 .pos3 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q3_A3.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q3_A3.png);
 }
 #ans3 .pos4 .firstAns {
 	background-image: url(../images/q/Q3_A4.png);
 }
 #ans3 .pos4 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q3_A4.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q3_A4.png);
 }
 #ans3 .pos4 .result {
 	background-image: url(../images/q/Q3_A4_p.png);
 }
-#ans3 .rightAnsp{
-    background-image: url(../images/q/Q3_rightanswer.png);
+#ans3 .rightAnsp {
+	background-image: url(../images/q/Q3_rightanswer.png);
 }
 /*--------------------answer4-------------------------*/
 #ans4 .pos1 .firstAns {
 	background-image: url(../images/q/Q4_A1.png);
 }
 #ans4 .pos1 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q4_A1.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q4_A1.png);
 }
 #ans4 .pos1 .result {
 	background-image: url(../images/q/Q4_A1_p.png);
@@ -491,17 +486,15 @@ section {
 	background-image: url(../images/q/Q4_A2.png);
 }
 #ans4 .pos2 .firstAns.disabel {
-<<<<<<< HEAD:css/main.css
-	background-image: url(../images/q/disable.png),url(../images/q/Q4_A2.png);
-=======
-    background-image: url(../images/q/disable.png),url(../images/q/Q4_A2.png);
+<<<<<<< HEAD:css/main.css  background-image: url(../images/q/disable.png), url(../images/q/Q4_A2.png);
+=======  background-image: url(../images/q/disable.png), url(../images/q/Q4_A2.png);
 >>>>>>> 4a693726fb112d04208f711ace7b3989a34c31fe:www/css/main.css
 }
 #ans4 .pos3 .firstAns {
 	background-image: url(../images/q/Q4_A3.png);
 }
 #ans4 .pos3 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q4_A3.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q4_A3.png);
 }
 #ans4 .pos3 .result {
 	background-image: url(../images/q/Q4_A3_p.png);
@@ -510,20 +503,20 @@ section {
 	background-image: url(../images/q/Q4_A4.png);
 }
 #ans4 .pos4 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q4_A4.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q4_A4.png);
 }
 #ans4 .pos4 .result {
 	background-image: url(../images/q/Q4_A4_p.png);
 }
-#ans4 .rightAnsp{
-    background-image: url(../images/q/Q4_rightanswer.png);
+#ans4 .rightAnsp {
+	background-image: url(../images/q/Q4_rightanswer.png);
 }
 /*--------------------answer5-------------------------*/
 #ans5 .pos1 .firstAns {
 	background-image: url(../images/q/Q5_A1.png);
 }
 #ans5 .pos1 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q5_A1.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q5_A1.png);
 }
 #ans5 .pos1 .result {
 	background-image: url(../images/q/Q5_A1_p.png);
@@ -532,7 +525,7 @@ section {
 	background-image: url(../images/q/Q5_A2.png);
 }
 #ans5 .pos2 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q5_A2.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q5_A2.png);
 }
 #ans5 .pos2 .result {
 	background-image: url(../images/q/Q5_A2_p.png);
@@ -541,19 +534,19 @@ section {
 	background-image: url(../images/q/Q5_A3.png);
 }
 #ans5 .pos3 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q5_A3.png);
+	background-image: url(../images/q/disable.png), url(../images/q/Q5_A3.png);
 }
 #ans5 .pos4 .firstAns {
 	background-image: url(../images/q/Q5_A4.png);
 }
 #ans5 .pos4 .firstAns.disabel {
-	background-image: url(../images/q/disable.png),url(../images/q/Q5_A4.png),;
+	background-image: url(../images/q/disable.png), url(../images/q/Q5_A4.png),;
 }
 #ans5 .pos4 .result {
 	background-image: url(../images/q/Q5_A4_p.png);
 }
-#ans5 .rightAnsp{
-    background-image: url(../images/q/Q5_rightanswer.png);
+#ans5 .rightAnsp {
+	background-image: url(../images/q/Q5_rightanswer.png);
 }
 /*=======================================================waiting============================================*/
 #waitingScreen {
@@ -599,8 +592,7 @@ section {
 	background-size: 82% 86%;
 	background-image: url('../images/share_bg_gif.gif');
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	/*background-position: 51% 77%;*/
+	background-repeat: no-repeat;/*background-position: 51% 77%;*/
 }
 #share .logoPlay {
 	display: block;
@@ -623,10 +615,10 @@ section {
 }
 .contect {
 	width: 69%;
-height: 38%;
-position: absolute;
-top: 56%;
-left: 15%;
+	height: 38%;
+	position: absolute;
+	top: 56%;
+	left: 15%;
 }
 .continue {
 	background-image: url(../images/continue.png);
@@ -638,8 +630,8 @@ left: 15%;
 	left: 28%;
 	top: 51%;
 }
-.shareScore{
-    background-image: url(../images/share.png);
+.shareScore {
+	background-image: url(../images/share.png);
 }
 .exit {
 	background-image: url(../images/exit.png);
@@ -651,10 +643,9 @@ left: 15%;
 	top: 77%;
 	left: 35%;
 }
-
 /*------------------------------risk page-------------------------*/
-.riskPage{
-    display: none;
+.riskPage {
+	display: none;
 	position: absolute;
 	top: 37%;
 	left: 5%;
@@ -664,44 +655,40 @@ left: 15%;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-.riskVal{
+.riskVal {
 	font-family: Conv_HEADOH__;
-	position:absolute;
-	color:#fff;
+	position: absolute;
+	color: #fff;
 }
 .riskPage>.continue {
-background-image: url(../images/continue.png);
-background-repeat: no-repeat;
-width: 44%;
-height: 82%;
-background-size: 100% 100%;
-position: absolute;
-left: 28%;
-top: 131%;
+	background-image: url(../images/continue.png);
+	background-repeat: no-repeat;
+	width: 44%;
+	height: 82%;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 28%;
+	top: 131%;
 }
-
 input[type="range"] {
- width: 71.5%;
- position: absolute;
- top: 37%;
- left: 12.5%;
- background-image:url(../images/risk/riskPpint.png);
- background-position:65.45% -50px;
- background-repeat: no-repeat;
- height: 22.5%;
- border-radius: 58px;
- -webkit-appearance: none;
+	width: 71.5%;
+	position: absolute;
+	top: 37%;
+	left: 12.5%;
+	background-image: url(../images/risk/riskPpint.png);
+	background-position: 65.45% -50px;
+	background-repeat: no-repeat;
+	height: 22.5%;
+	border-radius: 58px;
+	-webkit-appearance: none;
 }
-
-
-.secretGoToShare{
-    position: absolute;
-    bottom: 0px;
-    left:0px;
-    width: 100px;
-    height: 100px;
+.secretGoToShare {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100px;
+	height: 100px;
 }
-.active{
-	opacity:0.65;
-	
+.active {
+	opacity: 0.65;
 }
