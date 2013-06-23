@@ -69,10 +69,17 @@ function init() {
         goToSharePage();
     });
 
-    //video double click jump to another point
-    //$("video").bind("dblclick",function(){
-    //    jump();
-    //});
+    $("#share .continue").click(function(){
+        //change the btn to pressed
+
+        
+        //change the btn to share
+        
+
+        // freeze the camera
+
+
+    });
 }
 
 
