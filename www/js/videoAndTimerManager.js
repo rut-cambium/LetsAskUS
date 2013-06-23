@@ -258,6 +258,11 @@ function hideAnswer(id){
         video.pause();
         $(".movPlace").hide();
      }
+     //if q4 dont show the banner - the slider shown
+    if(id != 4){
+     //show skype banner
+     $("#card").removeClass("flop");
+    }
     
 
 }
@@ -467,6 +472,9 @@ function triggerNoVideoEvents(){
 
 function noVideoQ5Event(){
      curTimeNoVideo = 75;
+      //show skype banner
+      $(".filper").show();
+     $("#card").removeClass("flop");
     noVideoInterval =  setInterval(function() {
        
         curTimeNoVideo++;
