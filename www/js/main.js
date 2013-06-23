@@ -69,6 +69,8 @@ function goToHome(){
      $(".result").hide();
     $(".btn").css("opacity",1);
     $("#share .continue").removeClass("shareScore");
+    //init slider background
+    $("#riskSlide").css("background-position-x", "99.45%");
     //$(".disabel").removeClass("disabel");
     //init intervals;
      window.clearInterval(videoInterval);
