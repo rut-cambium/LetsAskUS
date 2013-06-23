@@ -1,0 +1,121 @@
+.movPlace {
+	position: absolute;
+	width: 830px;
+	height: 435px;
+	top: 7%;
+	left: 31%;
+	border-radius: 10px;
+	border: solid 12px #1f59a2;
+	display: none;
+	overflow: hidden;
+	z-index: 500;
+}
+
+.forJump{
+    position: absolute;
+	width: 830px;
+	height: 435px;
+	top: 7%;
+	left: 31%;
+    z-index:1000000;
+}
+video {
+	width: 830px;
+	height: 470px;
+	position: absolute;
+	top: -35px;
+}
+/*---------------------------------------------------home------------------------------------------------*/
+#home {
+	display: block;
+}
+span.logoHome {
+	background-image: url(../images/home/main.png);
+	background-repeat: no-repeat;
+	width: 1113px;
+	height: 869px;
+	position: absolute;
+	display: block;
+	top: 130px;
+	left: 440px;
+}
+#home img {
+	position: absolute;
+}
+.playBtn {
+	top: 1000px;
+	left: 655px;
+}
+.introBtn, .play24Btn, .leadBtn {
+	top: 1260px;
+}
+.introBtn {
+	left: 260px;
+}
+.play24Btn {
+	left: 794px;
+}
+.leadBtn {
+	left: 1345px;
+}
+/*==================================play=================================*/
+.questionSubHeader div {
+	display: inline-block;
+	font-size: 85px;
+}
+/*======================================================waiting=================================*/
+.waitingTextWrap {
+	font-size: 149px;
+	box-shadow: #42b2fd 0px 0px 30px 3px;
+}
+/*=====================================sahre===================================*/
+.resev{
+	font-family: Conv_HEADTH__;	
+	color: #fff;
+	font-size: 65px;
+	text-align: center;
+	font-weight: normal;
+}
+.score{
+	font-family: Conv_HEADoH__;  color: #fff;  
+	font-size: 99px;  text-align: center;	
+	text-shadow: #000 11px 8px 1px;
+}
+.better{
+	font-family: Conv_HEADTH__;  color: #fff;  
+	font-size: 69px;  text-align: center;	
+}
+/*========================================risk=====================================================*/
+input[type="range"] {
+ width: 71.5%;
+ position: absolute;
+ top: 37%;
+ left: 12.5%;
+ background-image:url(../images/risk/riskPpint.png);
+ background-position:99.45% -40px;
+ background-repeat: no-repeat;
+ height: 22.5%;
+ border-radius: 58px;
+ -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image:url(../images/risk/houseicon.png);
+    width: 150px;
+    height: 150px;
+ background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-color:transparent;
+ border:none;
+}
+
+.riskVal {
+	font-family: Conv_HEADOH__;
+	position: absolute;
+	color: #fff;
+	top: 32%;
+	right: 2%;
+	font-size: 64px;
+	width: 12%;
+}
