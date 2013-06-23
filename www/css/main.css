@@ -672,12 +672,12 @@ input[type="range"] {
 	position: absolute;
 	top: 37%;
 	left: 12.5%;
-	background-image: url(../images/risk/riskPpint.png);
+	/*background-image: url(../images/risk/riskPpint.png);
 	background-position: 65.45% -50px;
 	background-repeat: no-repeat;
 	height: 22.5%;
 	border-radius: 58px;
-	-webkit-appearance: none;
+	-webkit-appearance: none;*/
 }
 .secretGoToShare {
 	position: absolute;

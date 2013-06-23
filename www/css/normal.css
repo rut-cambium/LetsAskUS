@@ -111,7 +111,7 @@ input[type='range']::-webkit-slider-thumb {
  background-size:100% 100%;
  background-color:transparent;
  border:none;
-}
+ }
 .riskVal {
 font-family: Conv_HEADOH__;
 position: absolute;
