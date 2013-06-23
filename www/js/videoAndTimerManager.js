@@ -133,9 +133,27 @@ function jump(){
          showAnswerByJump(4);
         showQuestionByJump(4);
     }
+     else if(currentTime < 415){
+
+        currentTime =415;
+        $("#waitingScreen").show();
+        hideAnswer(4);
+       // showAndInitRiskPage();
+    }
+    else if(currentTime < 443){
+
+        currentTime =443;
+        $("#waitingScreen").hide();
+        showAndInitRiskPage();
+    }
+
     else if(currentTime < 506){
         currentTime =506;
+        $(".riskPage").hide();
          showAnswerByJump(5);
+         //show skype banner
+      $(".filper").show();
+     $("#card").removeClass("flop");
        // showQuestionByJump(5);
     }
     else if(currentTime < 578){
@@ -204,7 +222,9 @@ function showQuestionByJump(id){
 
 function showAnswerByJump(id){
     $(".question").hide();
+    $(".filper").show();
      //show answers
+     $(".answers").show();
      $(".answer").hide();
      $("#ans" + id).show();
         //display the animate
@@ -388,67 +408,52 @@ function triggerNoVideoEvents(){
   noVideoInterval =  setInterval(function() {
         curTimeNoVideo++;
          switch(curTimeNoVideo) {
-            case 5:
-                console.log("00:13" + curTimeNoVideo);
+            case 1:
                 $("body").trigger("showAnswers", [1]);
                 break;
 
-            case 7:
-                console.log("00:17" + curTimeNoVideo);
+            case 2:
                 $("body").trigger("showQuestion", [1]); break;
-            case 17:
-                console.log("01:46" + curTimeNoVideo);
+            case 12:
                 $("body").trigger("showPrecents", [1]);
                 break;
-            case 21:
-                console.log("01:49" + curTimeNoVideo);
+            case 16:
                 $("body").trigger("hideAnswer", [1]);
                 break;
-            case 22:
-                console.log("00:14" + curTimeNoVideo);
-                $("body").trigger("showAnswers", [2]);
+            case 18:
+                 $("body").trigger("showAnswers", [2]);
                 break;
-            case 25:
-                console.log("00:18" + curTimeNoVideo);
+            case 20:
                 $("body").trigger("showQuestion", [2]); break;
-            case 35:
-                console.log("01:46" + curTimeNoVideo);
+            case 30:
                 $("body").trigger("showPrecents", [2]);
                 break;
-            case 39:
-                console.log("01:49" + curTimeNoVideo);
+            case 34:
                 $("body").trigger("hideAnswer", [2]);
                 break;
-            case 40:
-                console.log("00:14" + curTimeNoVideo);
+            case 35:
                 $("body").trigger("showAnswers", [3]);
                 break;
-            case 43:
-                console.log("00:18" + curTimeNoVideo);
+            case 38:
                 $("body").trigger("showQuestion", [3]); break;
-            case 53:
-                console.log("01:46" + curTimeNoVideo);
+            case 48:
                 $("body").trigger("showPrecents", [3]);
                 break;
-            case 57:
-                console.log("01:49" + curTimeNoVideo);
+            case 52:
                 $("body").trigger("hideAnswer", [3]);
                 break;
-            case 58:
-                console.log("00:14" + curTimeNoVideo);
+            case 53:
                 $("body").trigger("showAnswers", [4]);
                 break;
-            case 61:
-                console.log("00:18" + curTimeNoVideo);
-                $("body").trigger("showQuestion", [4]); break;
-            case 71:
-                console.log("01:46" + curTimeNoVideo);
+            case 56:
+                 $("body").trigger("showQuestion", [4]); break;
+            case 66:
                 $("body").trigger("showPrecents", [4]);
                 break;
-            case 75:
+            case 70:
                  $("body").trigger("hideAnswer", [4]);
                 break;
-            case 76:
+            case 71:
                  $("body").trigger("showRisk", [4]);
                 break;
             //case 76:
@@ -561,6 +566,14 @@ function riskContClicked(){
 }
 
 function inputChange(pointer){
+    if(pointer.val() == pointer.attr("max")){
+        pointer.addClass("hideLeftSide");
+    }
+    else{
+        pointer.removeClass("hideLeftSide");
+    }
+    console.log("pointer.val: "+ pointer.val());
+    console.log("total: "+ pointer.attr("max"));
      //set value number
         value = pointer.val();
         $(".questionSubHeader .value .val").text("$" + value);
