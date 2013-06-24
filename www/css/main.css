@@ -545,7 +545,7 @@ background-repeat: no-repeat;
 #ans5 .pos4 .result {
 	background-image: url(../images/q/Q5_A4_p.png);
 }
-#ans5 .rightAnsp {
+#ans5 .pos3 .rightAnsp {
 	background-image: url(../images/q/Q5_rightanswer.png);
 }
 /*=======================================================waiting============================================*/
