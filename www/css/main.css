@@ -533,11 +533,14 @@ background-repeat: no-repeat;
 #ans5 .pos3 .firstAns.disabel {
 	background-image: url(../images/q/disable.png), url(../images/q/Q5_A3.png);
 }
+#ans5 .pos3 .result {
+	background-image: url(../images/q/Q5_A3_p.png);
+}
 #ans5 .pos4 .firstAns {
 	background-image: url(../images/q/Q5_A4.png);
 }
 #ans5 .pos4 .firstAns.disabel {
-	background-image: url(../images/q/disable.png), url(../images/q/Q5_A4.png),;
+	background-image: url(../images/q/disable.png), url(../images/q/Q5_A4.png);
 }
 #ans5 .pos4 .result {
 	background-image: url(../images/q/Q5_A4_p.png);
@@ -627,6 +630,16 @@ background-repeat: no-repeat;
 	left: 28%;
 	top: 51%;
 }
+.takePhoto{
+    background-image: url(../images/takeYourPhoto.png);
+	background-repeat: no-repeat;
+	width: 44%;
+	height: 24%;
+	background-size: 100% 100%;
+	position: absolute;
+	left: 28%;
+	top: 51%;
+}
 .shareScore {
 	background-image: url(../images/share.png);
 }
@@ -638,7 +651,7 @@ background-repeat: no-repeat;
 	background-size: 100% 100%;
 	position: absolute;
 	top: 77%;
-	left: 35%;
+	left: 37%;
 }
 /*------------------------------risk page-------------------------*/
 .riskPage {
@@ -688,4 +701,9 @@ input[type="range"] {
 }
 .active {
 	opacity: 0.65;
+}
+
+
+.audioWrap{
+    display: none;
 }

@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>ASK USA</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="js/main.js"></script>
-   <script src="js/videoAndTimerManager.js"></script>
+    <meta charset="utf-8">
+    <title>ASK USA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/videoAndTimerManager.js"></script>
     <script src="data/questionsData.js"></script> 
- <link rel="stylesheet"href="css/main.css" />
-<link rel="stylesheet" media="screen and (min-width: 701px) and (max-width:1399px)" href="css/normal.css" />
-<link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/iped3.css" />
+    <link rel="stylesheet"href="css/main.css" />
+    <link rel="stylesheet" media="screen and (min-width: 701px) and (max-width:1399px)" href="css/normal.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/iped3.css" />
   
    
 </head>
@@ -180,7 +180,7 @@
 		<p class="resev">ON TONIGHT’S SHOW YOU SCORED:</p>
 		<p class="score"></p>
 		<p class="better">better than <span>91%</span> of the players</p>
-		<div class="continue btn"></div>
+		<div class="takePhoto btn"></div>
 		<div class="exit" ontouchend="goToHome()"></div>
 	</div>
 </section><!---end share--->
@@ -191,5 +191,21 @@
         <div class="dots">...</div>
     </div>
 </div>
+    <div class="audioWrap">
+        <audio id="bgMusic" loop>
+          <source src="audio/musicBg.mp3" type="audio/mpeg">
+             Your browser does not support the audio element.
+        </audio>
+
+        <audio id="cameraMusic">
+          <source src="audio/camera.mp3" type="audio/mpeg">
+             Your browser does not support the audio element.
+        </audio>
+
+        <audio id="btnMusic">
+          <source src="audio/btn.mp3" type="audio/mpeg">
+             Your browser does not support the audio element.
+        </audio>
+    </div>
 </body>
 </html>
