@@ -1,6 +1,7 @@
 var playType = "";
 function showPlayPage(type){
-    
+    $("#btnMusic")[0].play();
+     
     //init intervals;
     window.clearInterval(videoInterval);
     window.clearInterval(noVideoInterval);
@@ -21,6 +22,9 @@ function showPlayPage(type){
     else{
         $(".movPlace").hide();
         playType = "noVideo";
+
+        //audio play
+        audio.play();
     }
 
      $("#home").hide();
@@ -58,6 +62,8 @@ function startPlay() {
 }
 
 function goToHome(){
+    $("#btnMusic")[0].play();
+
     $("section").hide();
     $("#home").show();
     if(playType == "video") {
@@ -90,6 +96,9 @@ function goToHome(){
     
    
 
+
+    //stop music
+    audio.pause();
 }
 
 function goToRisk(){

@@ -1,4 +1,5 @@
 var video;
+var audio;
 var time = 10;
 var total = 0;
 var value;
@@ -10,6 +11,7 @@ $(document).ready(function() {
 
 function init() {
     video = document.getElementById("video");
+    audio = $("#bgMusic")[0];
 
     $("body").bind("showAnswers", function(e, id) {
         showAnswers(id)
@@ -35,17 +37,16 @@ function init() {
         showAndInitRiskPage();
     });
 
-    //init the click ctns animation
-   // $(".firstAns").addClass("btn");
-    //$(".result").addClass("btn");
-	$('.answers').on('touchend','.firstAns',function(){
-		$(this).addClass('active disabel');
-	});
     
     //init the clicked answer event
     $("body").delegate(".firstAns", "touchend", function() {
-        
+        $(this).addClass('active disabel');
         answerClicked($(this));
+
+        //if the btn is not camera btn
+        if(!($(this) == $("#share .takePhoto"))){
+            $("#btnMusic")[0].play();
+        }
     });
     //init the risk slider
     $('input[type="range"]').change(function(e, i) {
@@ -58,21 +59,18 @@ function init() {
 
     //continue clicked
     $(".riskPage .continue").bind("touchend",function(){
+         $("#btnMusic")[0].play();
         riskContClicked();
     });
 
 
-
-
-    //secret div - to share page
-    $(".secretGoToShare").bind("dblclick",function() {
-        goToSharePage();
-    });
-
-    $("#share .continue").click(function(){
-        //change the btn to pressed
-
+    $("#share .takePhoto").click(function() {
+        //camera clicked sound 
+        if(!$(this).hasClass("shareScore")){
+            $("#cameraMusic")[0].play();
+        }
         
+
         //change the btn to share
         $(this).addClass("shareScore");
 
@@ -81,6 +79,13 @@ function init() {
         cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
                     console.log("failure handle camera");
                        }, "StopCamera", "stop", [str]);
+    });
+
+
+    //sound section
+    $(".btn").addClass("sound");
+    $(".sound").click(function(){
+        
     });
 }
 
@@ -220,6 +225,9 @@ function showQuestionByJump(id){
      $(".question").hide();
      $("#Q"+id).show();
      $("#card").addClass("flop");
+
+      //set total value
+      $(".questionSubHeader .total .val").text("$"+total);
 }
 
 function showAnswerByJump(id){
@@ -233,6 +241,9 @@ function showAnswerByJump(id){
       $("#ans" + id + " .answerFilp").show();
       $("#ans" + id + " .answerFilp").removeClass("openP");
       $("#ans" + id + " .answerFilp").addClass("openA");
+
+       //set total value
+      $(".questionSubHeader .total .val").text("$"+total);
 }
 function showPrecents(id){
      console.log("showPrecents " + id);
