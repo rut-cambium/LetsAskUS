@@ -28,6 +28,7 @@
 #import "MainViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
+AVCaptureVideoPreviewLayer *newCaptureVideoPreviewLayer;
 
 @implementation MainViewController
 
@@ -127,7 +128,7 @@
     }
     
     // Do any additional setup after loading the view from its nib.
-    AVCaptureVideoPreviewLayer *newCaptureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:newCaptureSession];
+    newCaptureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:newCaptureSession];
     UIView *view = videoPreviewView;
     view.backgroundColor = [UIColor redColor];
     ;    [theWebView addSubview:view];
@@ -146,9 +147,20 @@
     
     [viewLayer insertSublayer:newCaptureVideoPreviewLayer below:[[viewLayer sublayers] objectAtIndex:0]];
     [[newCaptureVideoPreviewLayer session] startRunning];
-        [[newCaptureVideoPreviewLayer session] stopRunning];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (stopCamera) name:@"StopCamera" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector (startCamera) name:@"StartCamera" object:nil];
     
     return [super webViewDidFinishLoad:theWebView];
+}
+
+- (void) startCamera
+{
+    [[newCaptureVideoPreviewLayer session] startRunning];
+}
+
+- (void) stopCamera
+{
+    [[newCaptureVideoPreviewLayer session] stopRunning];
 }
 
 /* Comment out the block below to over-ride */

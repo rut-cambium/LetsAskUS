@@ -82,6 +82,12 @@ function goToHome(){
      window.clearInterval(videoInterval);
      window.clearInterval(noVideoInterval);
     window.clearInterval(timeInterval);
+    
+    var str="start";
+    cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
+                 console.log("failure handle camera");
+                 }, "StopCamera", "stop", [str]);
+
 
 
     //stop music

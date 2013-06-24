@@ -43,6 +43,7 @@
 		AAAAB24916F8BF1800AC6B27 /* WDS icon 144X144.png in Resources */ = {isa = PBXBuildFile; fileRef = AAAAB24816F8BF1800AC6B27 /* WDS icon 144X144.png */; };
 		AAAAB24D16F8C0AA00AC6B27 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AAAAB24C16F8C0AA00AC6B27 /* Default-Landscape@2x~ipad.png */; };
 		AAB1B93516FAFE08005C4B01 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3088BBB8154F3926009F9C59 /* Default-Landscape~ipad.png */; };
+		AADF52E517770AD200AFAA59 /* stopCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AADF52E417770AD200AFAA59 /* stopCamera.m */; };
 		AAE1CB061771E19A00A539D4 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = AAE1CB051771E19A00A539D4 /* icon_144.png */; };
 		AAE1CB271771E77400A539D4 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AAAAB24A16F8C09C00AC6B27 /* Default-Landscape~ipad.png */; };
 		AAF0312C1771D8DD0076ADF2 /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF0312B1771D8DD0076ADF2 /* icon_72.png */; };
@@ -112,6 +113,8 @@
 		AAAAB24816F8BF1800AC6B27 /* WDS icon 144X144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WDS icon 144X144.png"; sourceTree = "<group>"; };
 		AAAAB24A16F8C09C00AC6B27 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		AAAAB24C16F8C0AA00AC6B27 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		AADF52E317770AB700AFAA59 /* stopCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stopCamera.h; sourceTree = "<group>"; };
+		AADF52E417770AD200AFAA59 /* stopCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stopCamera.m; sourceTree = "<group>"; };
 		AAE1CB051771E19A00A539D4 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
 		AAF0312B1771D8DD0076ADF2 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
 		D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
@@ -263,6 +266,8 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				AADF52E317770AB700AFAA59 /* stopCamera.h */,
+				AADF52E417770AD200AFAA59 /* stopCamera.m */,
 			);
 			name = Plugins;
 			path = WhoDareSing/Plugins;
@@ -434,6 +439,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				AADF52E517770AD200AFAA59 /* stopCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

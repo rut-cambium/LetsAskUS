@@ -75,8 +75,10 @@ function init() {
         $(this).addClass("shareScore");
 
         // freeze the camera
-
-
+        var str="stop";
+        cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
+                    console.log("failure handle camera");
+                       }, "StopCamera", "stop", [str]);
     });
 
 
