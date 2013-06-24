@@ -86,6 +86,9 @@ function goToHome(){
      window.clearInterval(noVideoInterval);
     window.clearInterval(timeInterval);
     
+    //risk taken init
+    riskWasTaken = false;
+    
     var str="start";
     setTimeout(function(){
                cordova.exec(function(succ){console.log("success handle camera");}, function(err) {

@@ -5,6 +5,7 @@ var total = 0;
 var value;
 var answersClickedArray = new Array(6);
 var indexSnswersClicked = 0;
+var riskWasTaken = false;
 $(document).ready(function() {
     init();
 });
@@ -12,7 +13,10 @@ $(document).ready(function() {
 function init() {
     video = document.getElementById("video");
     audio = $("#bgMusic")[0];
-
+    ///load audio
+    $("#bgMusic")[0].load();
+    $("#btnMusic")[0].load();
+    $("#cameraMusic")[0].load();
     $("body").bind("showAnswers", function(e, id) {
         showAnswers(id)
     });
@@ -34,6 +38,7 @@ function init() {
     });
 
     $("body").bind("showRisk", function(e, id) {
+                   
         showAndInitRiskPage();
     });
 
@@ -60,6 +65,7 @@ function init() {
     //continue clicked
     $(".riskPage .continue").bind("touchend",function(){
          $("#btnMusic")[0].play();
+                                  
         riskContClicked();
     });
 
@@ -150,8 +156,11 @@ function jump(){
     else if(currentTime < 443){
 
         currentTime =443;
+        
         $("#waitingScreen").hide();
-        showAndInitRiskPage();
+            showAndInitRiskPage();
+       
+        
     }
 
     else if(currentTime < 506){
@@ -553,16 +562,24 @@ function rightAnsClicked(){
 }
 
 function showAndInitRiskPage(){
-    $(".answers").hide();
-    $(".filper").hide();
-    $(".riskPage").show();
-    $(".coverAnswer").hide();
-    $(".riskPage .riskVal").text("$"+total);
-    $("#riskSlide").attr("max", total);
-    $("#waitingScreen").hide();
-}
+    //show risk page only if not taken it yet
+    if(riskWasTaken == false){
+        $(".answers").hide();
+        $(".filper").hide();
+        $(".riskPage").show();
+        $(".coverAnswer").hide();
+        $(".riskPage .riskVal").text("$"+total);
+        $("#riskSlide").attr("max", total);
+        $("#waitingScreen").hide();
+
+    }
+    else{
+        $("#waitingScreen").show();
+    }
+    }
 
 function riskContClicked(){
+    riskWasTaken = true;
     $(".answers").show();
     $(".riskPage").hide();
     $(".coverAnswer").show();
