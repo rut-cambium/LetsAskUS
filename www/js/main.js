@@ -60,11 +60,14 @@ function startPlay() {
 function goToHome(){
     $("section").hide();
     $("#home").show();
-    video.pause();
-    video.currentTime = 0;
+    if(playType == "video") {
+        video.pause();
+        video.currentTime = 0;
+    }
+   
     $(".movPlace").hide();
-	$('.firstAns').removeClass('active disabel');
-    $(".active").removeClass("active");
+	$('.firstAns').removeClass('active');
+    $(".firstAns").removeClass("disabel");
     //$(".answerFilp").removeClass("answerFilp");
      $(".result").hide();
     $(".btn").css("opacity",1);
@@ -78,10 +81,14 @@ function goToHome(){
     window.clearInterval(timeInterval);
     
     var str="start";
-    cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
-                 console.log("failure handle camera");
-                 }, "StopCamera", "stop", [str]);
+    setTimeout(function(){
+               cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
+                            console.log("failure handle camera");
+                            }, "StopCamera", "stop", [str]);
 
+               },1000);
+    
+   
 
 }
 

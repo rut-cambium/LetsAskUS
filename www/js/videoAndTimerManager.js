@@ -173,7 +173,7 @@ function showAnswers(id){
      $("#card").removeClass("flop");
      $("#Q" + id).hide();
      $(".banner").show();
-     
+    $(".riskPage").hide();
 
      //init the value, time, total by Q1
      initHeaderQuestionValue(id);
@@ -414,9 +414,9 @@ function triggerNoVideoEvents(){
                 $("body").trigger("showAnswers", [1]);
                 break;
 
-            case 2:
+            case 3:
                 $("body").trigger("showQuestion", [1]); break;
-            case 12:
+            case 13:
                 $("body").trigger("showPrecents", [1]);
                 break;
             case 16:
@@ -548,6 +548,7 @@ function showAndInitRiskPage(){
     $(".coverAnswer").hide();
     $(".riskPage .riskVal").text("$"+total);
     $("#riskSlide").attr("max", total);
+    $("#waitingScreen").hide();
 }
 
 function riskContClicked(){
