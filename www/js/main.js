@@ -1,6 +1,14 @@
 var playType = "";
+var btnMusicWasLoaded=false;
 function showPlayPage(type){
-    btnMusic.play();
+    if(!btnMusicWasLoaded){
+         btnMusic.load();
+        setTimeout(function(){
+                   btnMusic.play();},200);
+    }
+    else{
+        btnMusic.play();
+    }
      
     //init intervals;
     window.clearInterval(videoInterval);
@@ -66,6 +74,7 @@ function startPlay() {
 }
 
 function goToHome(){
+   // btnMusic.load();
     btnMusic.play();
 
     $("section").hide();
@@ -83,6 +92,7 @@ function goToHome(){
     $("#share .continue").removeClass("shareScore");
     //init slider background
     $("#riskSlide").css("background-position-x", "99.45%");
+    $("#riskSlide").val(0);
      //init intervals;
      window.clearInterval(videoInterval);
      window.clearInterval(noVideoInterval);

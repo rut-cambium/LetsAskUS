@@ -15,6 +15,10 @@ function init() {
     video = document.getElementById("video");
     audio = $("#bgMusic")[0];
     btnMusic = $("#btnMusic")[0];
+   // btnMusic.volume = 0;
+    //btnMusic.load();
+    //btnMusic.play();
+    //btnMusic.volume= 1;
     ///load audio
     $("#bgMusic")[0].load();
     $("#btnMusic")[0].load();
@@ -52,6 +56,7 @@ function init() {
 
         //if the btn is not camera btn
         if(!($(this) == $("#share .takePhoto"))){
+         //   btnMusic.load();
             btnMusic.play();
         }
     });
@@ -66,6 +71,7 @@ function init() {
 
     //continue clicked
     $(".riskPage .continue").bind("touchend",function(){
+        //btnMusic.load();
          btnMusic.play();
                                   
         riskContClicked();
@@ -292,8 +298,10 @@ function goToShare(){
     //hide the video
     video.pause();
     $(".movPlace").hide();
-    //
-     audio.volume = 0.15;
+    if(playType =="noVideo"){
+        audio.pause();
+    }
+     
 }
 
 function hideAnswer(id){
