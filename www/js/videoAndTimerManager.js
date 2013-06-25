@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 function init() {
     video = document.getElementById("video");
+    video.load();
     audio = $("#bgMusic")[0];
     btnMusic = $("#btnMusic")[0];
    // btnMusic.volume = 0;
@@ -81,8 +82,8 @@ function init() {
     $("#share .takePhoto").click(function() {
         //camera clicked sound 
         if(!$(this).hasClass("shareScore")) {
-           
-            $("#cameraMusic")[0].play();
+           $("#cameraMusic")[0].load();
+           $("#cameraMusic")[0].play();
         }
 
 

@@ -53,6 +53,7 @@ function startPlay() {
 
     //if video play
     if(playType == "video") {
+        
         video.play();
         setTimeout(function() {
             video.play();
@@ -90,7 +91,7 @@ function goToHome(){
     $(".firstAns").removeClass("disabel");
     $(".result").hide();
     $(".btn").css("opacity",1);
-    $("#share .continue").removeClass("shareScore");
+    $(".shareScore").removeClass("shareScore");
     //init slider background
     $("#riskSlide").css("background-position-x", "99.45%");
     $("#riskSlide").val(0);
