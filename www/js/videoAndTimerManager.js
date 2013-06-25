@@ -295,11 +295,14 @@ function goToShare(){
     //set the total time in share page
     $("#share .score").text("$" + total);
 
-    //hide the video
-    video.pause();
+    
     $(".movPlace").hide();
     if(playType =="noVideo"){
         audio.pause();
+    }
+    esle{
+        //hide the video
+        video.pause();
     }
      
 }

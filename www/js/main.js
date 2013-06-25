@@ -4,7 +4,8 @@ function showPlayPage(type){
     if(!btnMusicWasLoaded){
          btnMusic.load();
         setTimeout(function(){
-                   btnMusic.play();},200);
+                   btnMusic.play();
+                   btnMusicWasLoaded=true;},200);
     }
     else{
         btnMusic.play();
