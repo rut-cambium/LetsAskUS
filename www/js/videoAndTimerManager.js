@@ -1,5 +1,6 @@
 var video;
 var audio;
+var btnMusic;
 var time = 10;
 var total = 0;
 var value;
@@ -13,6 +14,7 @@ $(document).ready(function() {
 function init() {
     video = document.getElementById("video");
     audio = $("#bgMusic")[0];
+    btnMusic = $("#btnMusic")[0];
     ///load audio
     $("#bgMusic")[0].load();
     $("#btnMusic")[0].load();
@@ -50,7 +52,7 @@ function init() {
 
         //if the btn is not camera btn
         if(!($(this) == $("#share .takePhoto"))){
-            $("#btnMusic")[0].play();
+            btnMusic.play();
         }
     });
     //init the risk slider
@@ -64,7 +66,7 @@ function init() {
 
     //continue clicked
     $(".riskPage .continue").bind("touchend",function(){
-         $("#btnMusic")[0].play();
+         btnMusic.play();
                                   
         riskContClicked();
     });
@@ -72,26 +74,25 @@ function init() {
 
     $("#share .takePhoto").click(function() {
         //camera clicked sound 
-        if(!$(this).hasClass("shareScore")){
+        if(!$(this).hasClass("shareScore")) {
+           
             $("#cameraMusic")[0].play();
         }
-        
+
 
         //change the btn to share
         $(this).addClass("shareScore");
 
         // freeze the camera
-        var str="stop";
-        cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
-                    console.log("failure handle camera");
-                       }, "StopCamera", "stop", [str]);
+        var str = "stop";
+        cordova.exec(function(succ) { console.log("success handle camera"); }, function(err) {
+            console.log("failure handle camera");
+        }, "StopCamera", "stop", [str]);
     });
 
-
-    //sound section
-    $(".btn").addClass("sound");
-    $(".sound").click(function(){
-        
+    //video ended -go to share
+    $("#video").bind("ended", function() {
+       goToShare();
     });
 }
 
@@ -280,6 +281,21 @@ function showPrecentsByJump(id){
       $(".questionSubHeader .total .val").text("$"+total);
 }
 
+function goToShare(){
+    $("#play").hide();
+    $("#share").show();
+    $("#waitingScreen").hide();
+
+    //set the total time in share page
+    $("#share .score").text("$" + total);
+
+    //hide the video
+    video.pause();
+    $(".movPlace").hide();
+    //
+     audio.volume = 0.15;
+}
+
 function hideAnswer(id){
      console.log("hideAnswer " + id);
 
@@ -289,16 +305,10 @@ function hideAnswer(id){
 
      //if the current question is 5 - go to share page
      if(id == 5){
-        $("#play").hide();
-        $("#share").show();
-        $("#waitingScreen").hide();
-
-        //set the total time in share page
-        $("#share .score").text("$" + total);
-
-        //hide the video
-        video.pause();
-        $(".movPlace").hide();
+         if(playType =="noVideo"){
+             goToShare();
+         }
+       
      }
      //if q4 dont show the banner - the slider shown
     if(id != 4){

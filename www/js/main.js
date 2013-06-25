@@ -1,6 +1,6 @@
 var playType = "";
 function showPlayPage(type){
-    $("#btnMusic")[0].play();
+    btnMusic.play();
      
     //init intervals;
     window.clearInterval(videoInterval);
@@ -24,7 +24,11 @@ function showPlayPage(type){
         playType = "noVideo";
 
         //audio play
-        audio.play();
+        setTimeout(function(){
+            audio.load();
+             audio.play();
+        },500);
+       
     }
 
      $("#home").hide();
@@ -62,7 +66,7 @@ function startPlay() {
 }
 
 function goToHome(){
-    $("#btnMusic")[0].play();
+    btnMusic.play();
 
     $("section").hide();
     $("#home").show();
@@ -74,27 +78,34 @@ function goToHome(){
     $(".movPlace").hide();
 	$('.firstAns').removeClass('active');
     $(".firstAns").removeClass("disabel");
-    //$(".answerFilp").removeClass("answerFilp");
-     $(".result").hide();
+    $(".result").hide();
     $(".btn").css("opacity",1);
     $("#share .continue").removeClass("shareScore");
     //init slider background
     $("#riskSlide").css("background-position-x", "99.45%");
-    //$(".disabel").removeClass("disabel");
-    //init intervals;
+     //init intervals;
      window.clearInterval(videoInterval);
      window.clearInterval(noVideoInterval);
     window.clearInterval(timeInterval);
     
+    //init audio volume
+    audio.volume = 1;
+
     //risk taken init
     riskWasTaken = false;
     
     var str="start";
     setTimeout(function(){
-               cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
+        try{
+            cordova.exec(function(succ){console.log("success handle camera");}, function(err) {
                             console.log("failure handle camera");
                             }, "StopCamera", "stop", [str]);
 
+        }
+        catch(ex){
+            
+        }
+               
                },1000);
     
    
