@@ -177,6 +177,7 @@ function jump(){
          //show skype banner
       $(".filper").show();
      $("#card").removeClass("flop");
+     $(".banner").show();
        // showQuestionByJump(5);
     }
     else if(currentTime < 578){
@@ -190,11 +191,14 @@ function jump(){
 
 function showAnswers(id){
      console.log("showAnswers " + id);
+      $(".riskPage").hide();
      //show skype banner
+    $(".filper").show();
      $("#card").removeClass("flop");
-     $("#Q" + id).hide();
      $(".banner").show();
-    $(".riskPage").hide();
+
+     $("#Q" + id).hide();
+   
 
      //init the value, time, total by Q1
      initHeaderQuestionValue(id);
@@ -324,7 +328,9 @@ function hideAnswer(id){
      //if q4 dont show the banner - the slider shown
     if(id != 4){
      //show skype banner
+    $(".filper").show();
      $("#card").removeClass("flop");
+     $(".banner").show();
     }
     
 
@@ -520,9 +526,11 @@ function triggerNoVideoEvents(){
 
 function noVideoQ5Event(){
      curTimeNoVideo = 75;
-      //show skype banner
-      $(".filper").show();
+     //show skype banner
+     $(".filper").show();
      $("#card").removeClass("flop");
+     $(".banner").show();
+
     noVideoInterval =  setInterval(function() {
        
         curTimeNoVideo++;
