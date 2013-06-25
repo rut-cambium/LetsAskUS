@@ -300,7 +300,7 @@ function goToShare(){
     if(playType =="noVideo"){
         audio.pause();
     }
-    esle{
+    else{
         //hide the video
         video.pause();
     }
