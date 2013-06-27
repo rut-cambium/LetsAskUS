@@ -517,8 +517,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: THE BOX LTD.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: THE BOX LTD.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Salzer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Salzer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WhoDareSing/LAA-Prefix.pch";
@@ -527,8 +527,8 @@
 				INFOPLIST_FILE = "WhoDareSing/LAA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = LAA;
-				PROVISIONING_PROFILE = "849BAE5A-18D0-4AF3-810C-0CD12F614787";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "849BAE5A-18D0-4AF3-810C-0CD12F614787";
+				PROVISIONING_PROFILE = "E70B1CC6-0024-4735-904F-F06EB4B98AB7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E70B1CC6-0024-4735-904F-F06EB4B98AB7";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
@@ -582,8 +582,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: THE BOX LTD.";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: THE BOX LTD.";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: David Salzer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Salzer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -609,8 +609,8 @@
 					"-all_load",
 					"-Obj-C",
 				);
-				PROVISIONING_PROFILE = "849BAE5A-18D0-4AF3-810C-0CD12F614787";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "849BAE5A-18D0-4AF3-810C-0CD12F614787";
+				PROVISIONING_PROFILE = "E70B1CC6-0024-4735-904F-F06EB4B98AB7";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E70B1CC6-0024-4735-904F-F06EB4B98AB7";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				USER_HEADER_SEARCH_PATHS = "";
